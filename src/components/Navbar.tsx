@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
   ];
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent('Olá Bruna, estive a ver o site da WebProLine e gostaria de falar sobre um projeto para o meu negócio.');
+    const message = encodeURIComponent('Olá, estive a ver o site da WebProLine e gostaria de falar sobre um projeto para o meu negócio.');
     window.open(`https://wa.me/351912345678?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
