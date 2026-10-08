@@ -1,0 +1,155 @@
+import React from 'react';
+import { 
+  Award, 
+  Code2, 
+  HeartHandshake, 
+  MapPin, 
+  Mail, 
+  MessageSquare, 
+  CheckCircle2, 
+  Sparkles,
+  Shield,
+  Coffee
+} from 'lucide-react';
+import brunaPortraitImg from '../assets/images/bruna_paco_engineer_1791468805984.jpg';
+
+export const AboutBruna: React.FC = () => {
+  const handleDirectWhatsApp = () => {
+    const msg = encodeURIComponent('Olá Bruna, li a sua apresentação no site da WebProLine e gostava de trocar ideias sobre um projeto.');
+    window.open(`https://wa.me/351912345678?text=${msg}`, '_blank', 'noopener,noreferrer');
+  };
+
+  return (
+    <section id="sobre" className="py-20 lg:py-28 bg-slate-950 relative border-t border-slate-800">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          {/* Left Column: Portrait & Trust Card */}
+          <div className="lg:col-span-5">
+            <div className="relative mx-auto max-w-md">
+              {/* Image Frame */}
+              <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">
+                <img
+                  src={brunaPortraitImg}
+                  alt="Bruna Paço - Engenheira de Software e Fundadora da WebProLine"
+                  referrerPolicy="no-referrer"
+                  className="w-full aspect-square object-cover"
+                />
+                
+                {/* Overlay card */}
+                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent p-6 pt-12">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 mb-1">
+                    <MapPin className="h-3.5 w-3.5" />
+                    <span>Braga, Minho · Portugal</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white font-display">
+                    Bruna Paço
+                  </h3>
+                  <p className="text-xs text-slate-300">
+                    Engenheira de Software & Líder Técnica na WebProLine
+                  </p>
+                </div>
+              </div>
+
+              {/* Trust Badge below */}
+              <div className="mt-4 p-4 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between text-xs">
+                <div className="flex items-center gap-2 text-slate-300">
+                  <Coffee className="h-4 w-4 text-amber-400" />
+                  <span>Reuniões presenciais em Braga ou online</span>
+                </div>
+                <span className="text-cyan-400 font-medium">webproline.pt</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Narrative & Values */}
+          <div className="lg:col-span-7 space-y-6">
+            <div>
+              <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400 mb-2">
+                <span>Quem Está Por Trás</span>
+                <span aria-hidden="true" className="text-slate-600">·</span>
+                <span>Engenharia com Rosto Humano</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white font-display text-balance">
+                Rigor técnico de engenharia aliado à realidade prática do comércio e serviços
+              </h2>
+            </div>
+
+            <p className="text-base text-slate-300 leading-relaxed">
+              Olá, sou a <strong>Bruna Paço</strong>. Ao longo do meu percurso em engenharia de software, percebi que a grande maioria dos negócios locais — desde a barbearia na esquina à clínica médica ou à fábrica de produção — ficava presa entre duas más escolhas:
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+                <span className="text-rose-400 font-semibold text-xs block mb-1">❌ O Problema Habitual</span>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  Plataformas de marketplace genéricas que cobram comissões por cada cliente marcado, ou sites em templates lentos que quebram com a primeira atualização.
+                </p>
+              </div>
+
+              <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-800/40">
+                <span className="text-cyan-400 font-semibold text-xs block mb-1">✅ A Abordagem WebProLine</span>
+                <p className="text-xs text-slate-300 leading-relaxed">
+                  Sistemas proprietários, leves e rápidos. Sem intermediários, sem comissões abusivas e feitos à medida da rotina real do seu negócio.
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3 pt-2">
+              <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                Os meus compromissos em cada projeto:
+              </h4>
+
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <h5 className="text-sm font-semibold text-white">Zero jargão incompreensível</h5>
+                  <p className="text-xs text-slate-400 mt-0.5">Explico o funcionamento em termos claros de negócio: quanto tempo poupa e quanto passa a faturar.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <h5 className="text-sm font-semibold text-white">Código limpo e autonomia total</h5>
+                  <p className="text-xs text-slate-400 mt-0.5">A plataforma é sua. Não fica refém de contratos de fidelização perpétuos.</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
+                <div>
+                  <h5 className="text-sm font-semibold text-white">Acompanhamento próximo & formação</h5>
+                  <p className="text-xs text-slate-400 mt-0.5">Ensino pessoalmente a sua equipa a tirar partido do sistema em menos de 15 minutos.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick action with Bruna */}
+            <div className="pt-4 flex flex-wrap items-center gap-4">
+              <button
+                onClick={handleDirectWhatsApp}
+                className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3.5 text-xs sm:text-sm transition-all shadow-md shadow-cyan-500/20 cursor-pointer"
+              >
+                <MessageSquare className="h-4 w-4" />
+                <span>Conversar Diretamente com a Bruna</span>
+              </button>
+
+              <a
+                href="mailto:brunafpaco@gmail.com"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 hover:text-white transition-colors"
+              >
+                <Mail className="h-4 w-4 text-cyan-400" />
+                <span>brunafpaco@gmail.com</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
