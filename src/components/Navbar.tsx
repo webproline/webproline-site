@@ -53,7 +53,7 @@ export const Navbar: React.FC = () => {
             className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-950 transition-all hover:bg-cyan-400 active:scale-95 shadow-sm shadow-cyan-500/20 whitespace-nowrap cursor-pointer"
           >
             <MessageSquareCode className="h-4 w-4" />
-            <span>Falar no WhatsApp</span>
+            <span>Entrar em contacto</span>
             <ArrowUpRight className="h-3.5 w-3.5 opacity-70" />
           </button>
 
@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
                 className="flex w-full items-center justify-center gap-2 rounded-lg bg-cyan-500 px-4 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-400 cursor-pointer"
               >
                 <MessageSquareCode className="h-4 w-4" />
-                <span>Falar no WhatsApp com a Bruna</span>
+                <span>Entrar em contacto</span>
               </button>
             </div>
           </nav>
