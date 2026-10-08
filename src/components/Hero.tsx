@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowDown, MessageSquare, Play, Sparkles, ShieldCheck, Zap, Calendar } from 'lucide-react';
+import { ArrowDown, Mail, Play, Sparkles, ShieldCheck, Zap, Calendar } from 'lucide-react';
 import heroWorkspaceImg from '../assets/images/webproline_hero_workspace_1791468818225.jpg';
+import { buildMailto } from '../data/contact';
 
 export const Hero: React.FC = () => {
   const handleScrollToSimulator = () => {
@@ -10,10 +11,10 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const handleWhatsAppDirect = () => {
-    const msg = encodeURIComponent('Olá Bruna, estive a ver a WebProLine e gostava de receber uma avaliação gratuita para o meu negócio.');
-    window.open(`https://wa.me/351912345678?text=${msg}`, '_blank', 'noopener,noreferrer');
-  };
+  const mailtoHref = buildMailto(
+    'Pedido de avaliação gratuita',
+    'Olá, estive a ver o site da WebProLine e gostava de receber uma avaliação gratuita para o meu negócio.'
+  );
 
   return (
     <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-slate-950">
@@ -64,13 +65,13 @@ export const Hero: React.FC = () => {
                 <span>Experimentar Demonstração Interativa</span>
               </button>
 
-              <button
-                onClick={handleWhatsAppDirect}
+              <a
+                href={mailtoHref}
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700/80 bg-slate-900/80 px-6 py-4 text-sm font-semibold text-slate-200 backdrop-blur-sm transition-all hover:border-slate-600 hover:bg-slate-800 hover:text-white active:scale-[0.98] cursor-pointer whitespace-nowrap"
               >
-                <MessageSquare className="h-4 w-4 text-emerald-400" />
-                <span>Falar no WhatsApp</span>
-              </button>
+                <Mail className="h-4 w-4 text-cyan-400" />
+                <span>Pedir avaliação gratuita</span>
+              </a>
             </div>
 
             {/* Trust indicators - Zero Pill Discipline (unboxed text with ·) */}

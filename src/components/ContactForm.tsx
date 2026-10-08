@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Send, 
-  MessageSquare, 
   CheckCircle2, 
   MapPin, 
   Mail, 
-  Phone, 
-  Sparkles, 
-  Clock, 
+  Instagram,
   ShieldCheck,
   AlertCircle
 } from 'lucide-react';
+import { COMPANY_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, buildMailto } from '../data/contact';
 
 export const ContactForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -51,50 +49,39 @@ export const ContactForm: React.FC = () => {
     { value: 'agendamento', label: 'Sistema de Agendamento Online Automático' },
     { value: 'site_loja', label: 'Website Moderno / Loja Online com Pagamentos' },
     { value: 'eliminar_excel', label: 'Plataforma Interna (Eliminar Excel e Papel)' },
-    { value: 'automacao_ia', label: 'Automação WhatsApp & Atendimento com IA' },
+    { value: 'automacao_ia', label: 'Automação de Atendimento com IA' },
     { value: 'consultoria', label: 'Diagnóstico Geral e Avaliação Gratuita' },
   ];
 
-  const buildWhatsAppMessage = () => {
+  const buildMessageBody = () => {
     const businessLabel = businessOptions.find(b => b.value === businessType)?.label || businessType;
     const goalLabel = goalOptions.find(g => g.value === goal)?.label || goal;
     
-    let text = `Olá Bruna!\n\nChamo-me *${name || 'um visitante do site'}* e tenho um negócio no ramo de *${businessLabel}*.\n\n*O que procuro melhorar:* ${goalLabel}.`;
+    let text = `Olá!\n\nChamo-me *${name || 'um visitante do site'}* e tenho um negócio no ramo de *${businessLabel}*.\n\n*O que procuro melhorar:* ${goalLabel}.`;
     
     if (contact) {
-      text += `\n*Meu contacto direto:* ${contact}`;
+      text += `\n*O meu contacto:* ${contact}`;
     }
     if (notes) {
       text += `\n*Detalhes adicionais:* ${notes}`;
     }
     
     text += `\n\nVi as soluções da WebProLine e gostaria de receber uma proposta/avaliação.`;
-    return encodeURIComponent(text);
+    return text;
   };
 
-  const handleSendWhatsApp = (e: React.FormEvent) => {
+  const handleSendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) {
-      setValidationError('Por favor, indique o seu nome para podermos iniciar a conversa.');
-      return;
-    }
-    setValidationError('');
-    const encoded = buildWhatsAppMessage();
-    window.open(`https://wa.me/351912345678?text=${encoded}`, '_blank', 'noopener,noreferrer');
-    setIsSubmitted(true);
-  };
-
-  const handleSubmitForm = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim()) {
-      setValidationError('Por favor, indique o seu nome.');
+      setValidationError('Por favor, indique o seu nome para podermos responder.');
       return;
     }
     if (!contact.trim()) {
-      setValidationError('Por favor, indique o seu telemóvel ou email de contacto.');
+      setValidationError('Por favor, indique um email ou Instagram para lhe respondermos.');
       return;
     }
     setValidationError('');
+    window.location.href = buildMailto(`Contacto de ${name.trim()} — WebProLine`, buildMessageBody());
     setIsSubmitted(true);
   };
 
@@ -116,34 +103,34 @@ export const ContactForm: React.FC = () => {
                 Vamos conversar sobre o seu negócio?
               </h2>
               <p className="mt-4 text-base text-slate-300 leading-relaxed">
-                Envie uma mensagem rápida. Respondo diretamente por WhatsApp ou email com um diagnóstico claro e estimativa de investimento, sem compromisso.
+                Envie uma mensagem rápida. Respondemos diretamente por email ou Instagram com um diagnóstico claro e estimativa de investimento, sem compromisso.
               </p>
             </div>
 
             {/* Visual Contact Cards */}
             <div className="space-y-4">
               <a 
-                href="https://wa.me/351912345678" 
+                href={INSTAGRAM_URL}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex items-start gap-4 p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-emerald-500/50 hover:bg-slate-900 transition-all cursor-pointer"
+                className="group flex items-start gap-4 p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/50 hover:bg-slate-900 transition-all cursor-pointer"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 group-hover:scale-105 transition-transform">
-                  <MessageSquare className="h-5 w-5" />
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 group-hover:scale-105 transition-transform">
+                  <Instagram className="h-5 w-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors">
-                    WhatsApp com a Bruna Paço
+                  <h4 className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                    Instagram
                   </h4>
-                  <p className="text-xs text-slate-400 mt-0.5">Resposta rápida (habitualmente em menos de 2h úteis)</p>
-                  <span className="text-xs font-mono text-emerald-400 font-semibold mt-1 inline-block">
-                    Abrir conversa no WhatsApp &rarr;
+                  <p className="text-xs text-slate-400 mt-0.5">{INSTAGRAM_HANDLE}</p>
+                  <span className="text-xs font-mono text-cyan-400 font-semibold mt-1 inline-block">
+                    Enviar mensagem no Instagram &rarr;
                   </span>
                 </div>
               </a>
 
               <a 
-                href="mailto:brunafpaco@gmail.com"
+                href={`mailto:${COMPANY_EMAIL}`}
                 className="group flex items-start gap-4 p-4 rounded-xl border border-slate-800 bg-slate-900/60 hover:border-cyan-500/50 hover:bg-slate-900 transition-all cursor-pointer"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 group-hover:scale-105 transition-transform">
@@ -153,7 +140,7 @@ export const ContactForm: React.FC = () => {
                   <h4 className="text-sm font-semibold text-white group-hover:text-cyan-300 transition-colors">
                     Email Direto
                   </h4>
-                  <p className="text-xs text-slate-400 mt-0.5">brunafpaco@gmail.com</p>
+                  <p className="text-xs text-slate-400 mt-0.5">{COMPANY_EMAIL}</p>
                   <span className="text-xs font-mono text-cyan-400 font-semibold mt-1 inline-block">
                     Enviar email &rarr;
                   </span>
@@ -196,7 +183,7 @@ export const ContactForm: React.FC = () => {
                     Mensagem Preparada com Sucesso!
                   </h3>
                   <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
-                    Obrigada pelo interesse, <strong>{name}</strong>! Se abriu a conversa no WhatsApp, a Bruna responderá de imediato. Caso tenha submetido para email, entraremos em contacto brevemente.
+                    Obrigado pelo interesse, <strong>{name}</strong>! Se a sua aplicação de email abriu com a mensagem pronta, basta enviá-la. Responderemos o mais brevemente possível.
                   </p>
                   <div className="pt-4">
                     <button
@@ -208,13 +195,13 @@ export const ContactForm: React.FC = () => {
                   </div>
                 </div>
               ) : (
-                <form className="space-y-5" onSubmit={handleSendWhatsApp}>
+                <form className="space-y-5" onSubmit={handleSendEmail}>
                   <div>
                     <h3 className="text-xl font-bold text-white font-display">
                       Formulário Rápido de Diagnóstico
                     </h3>
                     <p className="text-xs text-slate-400 mt-1">
-                      Preencha os campos abaixo para gerar uma mensagem pronta para o WhatsApp ou para envio direto:
+                      Preencha os campos abaixo para gerar uma mensagem pronta a enviar por email:
                     </p>
                   </div>
 
@@ -243,13 +230,13 @@ export const ContactForm: React.FC = () => {
                   {/* Contact field */}
                   <div>
                     <label className="block text-xs font-semibold text-slate-300 mb-1.5">
-                      Telemóvel ou Email de Contacto
+                      Email ou Instagram de Contacto
                     </label>
                     <input
                       type="text"
                       value={contact}
                       onChange={(e) => setContact(e.target.value)}
-                      placeholder="Ex: 912 345 678 ou exemplo@empresa.pt"
+                      placeholder="Ex: exemplo@empresa.pt ou @onossonegocio"
                       className="w-full rounded-xl border border-slate-700/80 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none transition-colors"
                     />
                   </div>
@@ -308,24 +295,25 @@ export const ContactForm: React.FC = () => {
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-3.5 text-sm font-bold text-slate-950 shadow-md shadow-emerald-500/20 hover:brightness-110 active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap"
+                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3.5 text-sm font-bold text-slate-950 shadow-md shadow-cyan-500/20 hover:brightness-110 active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap"
                     >
-                      <MessageSquare className="h-4 w-4" />
-                      <span>Enviar Mensagem por WhatsApp</span>
+                      <Send className="h-4 w-4" />
+                      <span>Enviar por Email</span>
                     </button>
 
-                    <button
-                      type="button"
-                      onClick={handleSubmitForm}
+                    <a
+                      href={INSTAGRAM_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-800 px-5 py-3.5 text-sm font-semibold text-slate-200 hover:bg-slate-700 hover:text-white active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap"
                     >
-                      <Send className="h-4 w-4 text-cyan-400" />
-                      <span>Submeter por Email</span>
-                    </button>
+                      <Instagram className="h-4 w-4 text-cyan-400" />
+                      <span>Falar no Instagram</span>
+                    </a>
                   </div>
 
                   <p className="text-[11px] text-slate-400 text-center pt-1">
-                    Ao clicar em WhatsApp, abre a conversa com a mensagem já redigida.
+                    Ao clicar em Enviar por Email, abre a sua aplicação de email com a mensagem já redigida.
                   </p>
                 </form>
               )}

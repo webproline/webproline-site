@@ -8,29 +8,26 @@ export const Navbar: React.FC = () => {
     { label: 'Simulador', href: '#simulador' },
     { label: 'Diagnóstico', href: '#diagnostico' },
     { label: 'Soluções', href: '#solucoes' },
-    { label: 'Sobre a Bruna', href: '#sobre' },
+    { label: 'Sobre Nós', href: '#sobre' },
     { label: 'Resultados', href: '#resultados' },
   ];
-
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent('Olá, estive a ver o site da WebProLine e gostaria de falar sobre um projeto para o meu negócio.');
-    window.open(`https://wa.me/351912345678?text=${message}`, '_blank', 'noopener,noreferrer');
-  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Zone 1: Single text element wordmark */}
-        <a 
-          href="#" 
-          className="group flex items-center gap-2 text-xl font-bold tracking-tight text-white transition-opacity hover:opacity-90 font-display"
+        {/* Zone 1: Logo */}
+        <a
+          href="#"
+          aria-label="WebProLine — página inicial"
+          className="flex items-center transition-opacity hover:opacity-90"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 text-slate-950 font-extrabold text-sm shadow-sm">
-            W
-          </span>
-          <span className="tracking-tight">
-            WebProLine<span className="text-cyan-400">.pt</span>
-          </span>
+          <img
+            src="/logo_webproline_256.png"
+            alt="WebProLine"
+            width={56}
+            height={56}
+            className="h-14 w-14 rounded-full"
+          />
         </a>
 
         {/* Zone 2: 4-6 clean text navigation links */}
@@ -48,14 +45,14 @@ export const Navbar: React.FC = () => {
 
         {/* Zone 3: 1-2 primary actions */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={handleWhatsAppClick}
+          <a
+            href="#contacto"
             className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-950 transition-all hover:bg-cyan-400 active:scale-95 shadow-sm shadow-cyan-500/20 whitespace-nowrap cursor-pointer"
           >
             <MessageSquareCode className="h-4 w-4" />
             <span>Entrar em contacto</span>
             <ArrowUpRight className="h-3.5 w-3.5 opacity-70" />
-          </button>
+          </a>
 
           {/* Mobile hamburger toggle */}
           <button
@@ -84,16 +81,14 @@ export const Navbar: React.FC = () => {
               </a>
             ))}
             <div className="pt-2">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  handleWhatsAppClick();
-                }}
+              <a
+                href="#contacto"
+                onClick={() => setMobileMenuOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-lg bg-cyan-500 px-4 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-400 cursor-pointer"
               >
                 <MessageSquareCode className="h-4 w-4" />
                 <span>Entrar em contacto</span>
-              </button>
+              </a>
             </div>
           </nav>
         </div>

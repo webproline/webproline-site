@@ -9,7 +9,7 @@ import { Hero } from './components/Hero';
 import { InteractiveSimulator } from './components/InteractiveSimulator';
 import { NeedsCalculator } from './components/NeedsCalculator';
 import { ServicesSection } from './components/ServicesSection';
-import { AboutBruna } from './components/AboutBruna';
+import { AboutUs } from './components/AboutUs';
 import { CaseStudiesSection } from './components/CaseStudiesSection';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
@@ -23,7 +23,7 @@ export default function App() {
         <InteractiveSimulator />
         <NeedsCalculator />
         <ServicesSection />
-        <AboutBruna />
+        <AboutUs />
         <CaseStudiesSection />
         <ContactForm />
       </main>

@@ -290,7 +290,7 @@ export const CASE_STUDIES = [
     submetric: 'Zero sobreposições em 4 gabinetes',
     challenge: 'A receção ficava sobrecarregada nos picos de manhã, gerando atrasos e erros de marcação de gabinetes partilhados.',
     solution: 'Plataforma clínica à medida com gestão inteligente de salas e lembretes por SMS aos utentes.',
-    quote: 'A Bruna compreendeu as particularidades da nossa clínica à primeira. A plataforma é simples, rápida e os pacientes elogiam.',
+    quote: 'A WebProLine compreendeu as particularidades da nossa clínica à primeira. A plataforma é simples, rápida e os pacientes elogiam.',
     author: 'Dra. Teresa Oliveira',
     role: 'Diretora Clínica',
   },

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowUp, Mail, MapPin, MessageSquare } from 'lucide-react';
+import { ArrowUp, Mail, MapPin, Instagram } from 'lucide-react';
+import { COMPANY_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '../data/contact';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -14,16 +15,17 @@ export const Footer: React.FC = () => {
           
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-3">
-            <a href="#" className="flex items-center gap-2 text-lg font-bold text-white font-display">
-              <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-cyan-500 text-slate-950 font-black text-xs">
-                W
-              </span>
-              <span>
-                WebProLine<span className="text-cyan-400">.pt</span>
-              </span>
+            <a href="#" aria-label="WebProLine — página inicial" className="inline-block">
+              <img
+                src="/logo_webproline_256.png"
+                alt="WebProLine"
+                width={64}
+                height={64}
+                className="h-16 w-16 rounded-full"
+              />
             </a>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              Engenharia de software e plataformas digitais sob medida para negócios locais e PMEs. Criado por Bruna Paço em Braga, Portugal.
+              Engenharia de software e plataformas digitais sob medida para negócios locais e PMEs. Desenvolvido em Braga, Portugal.
             </p>
             <div className="flex items-center gap-3 text-xs text-slate-400 pt-1">
               <span className="flex items-center gap-1">
@@ -32,10 +34,10 @@ export const Footer: React.FC = () => {
               </span>
               <span aria-hidden="true" className="text-slate-700">·</span>
               <a 
-                href="mailto:brunafpaco@gmail.com" 
+                href={`mailto:${COMPANY_EMAIL}`}
                 className="hover:text-white transition-colors"
               >
-                brunafpaco@gmail.com
+                {COMPANY_EMAIL}
               </a>
             </div>
           </div>
@@ -63,7 +65,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#sobre" className="hover:text-cyan-400 transition-colors">
-                  Sobre a Bruna Paço
+                  Sobre Nós
                 </a>
               </li>
               <li>
@@ -81,13 +83,20 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="space-y-2 text-xs">
               <a
-                href="https://wa.me/351912345678"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium"
+                className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium"
               >
-                <MessageSquare className="h-3.5 w-3.5" />
-                <span>Conversar no WhatsApp</span>
+                <Instagram className="h-3.5 w-3.5" />
+                <span>{INSTAGRAM_HANDLE}</span>
+              </a>
+              <a
+                href={`mailto:${COMPANY_EMAIL}`}
+                className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium"
+              >
+                <Mail className="h-3.5 w-3.5" />
+                <span>Enviar email</span>
               </a>
               <p className="text-[11px] text-slate-500">
                 Atendimento presencial no distrito de Braga e digital em todo o país.
@@ -99,7 +108,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {new Date().getFullYear()} WebProLine · Engenharia de Software por Bruna Paço. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} WebProLine · Todos os direitos reservados.</p>
           
           <button
             onClick={scrollToTop}
