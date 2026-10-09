@@ -69,10 +69,11 @@ export const NeedsCalculator: React.FC = () => {
             <span>Calculadora de Benefícios & ROI</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display text-balance">
-            Descubra quanto tempo e dinheiro o seu negócio pode recuperar
+            Estimativa de tempo e dinheiro que o seu negócio pode poupar
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Selecione o seu setor e ajuste os parâmetros semanais para calcular a poupança real com uma plataforma sob medida.
+            Estes valores são apenas uma estimativa com base nos dados que indicar. 
+            Não são uma garantia nem uma promessa de resultados. 
           </p>
         </div>
 
@@ -168,43 +169,49 @@ export const NeedsCalculator: React.FC = () => {
             </div>
 
             {/* Instant Calculated Impact Cards */}
-            <div className="pt-2 border-t border-slate-800 space-y-3">
-              <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-950/80 border border-slate-800/80">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
-                    <Clock className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-slate-400 block">Tempo livre recuperado</span>
-                    <span className="text-sm font-semibold text-slate-200">Menos interrupções</span>
-                  </div>
+          <div className="pt-2 border-t border-slate-800 space-y-3">
+            <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-950/80 border border-slate-800/80">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">
+                  <Clock className="h-4 w-4" />
                 </div>
-                <div className="text-right">
-                  <span className="text-xl font-extrabold text-cyan-400 font-mono tabular-nums">
-                    +{monthlyHoursSaved} h
-                  </span>
-                  <span className="block text-[10px] text-slate-400">por mês</span>
+                <div>
+                  <span className="text-xs text-slate-400 block">Estimativa de horas que pode deixar de gastar</span>
+                  <span className="text-sm font-semibold text-slate-200">Menos interrupções</span>
                 </div>
               </div>
-
-              <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-950/80 border border-slate-800/80">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
-                    <TrendingUp className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <span className="text-xs text-slate-400 block">Valor estimado recuperado</span>
-                    <span className="text-sm font-semibold text-slate-200">No-shows + horas úteis</span>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <span className="text-xl font-extrabold text-emerald-400 font-mono tabular-nums">
-                    +{estimatedRevenueGained} €
-                  </span>
-                  <span className="block text-[10px] text-slate-400">estimativa/mês</span>
-                </div>
+              <div className="text-right">
+                <span className="text-xl font-extrabold text-cyan-400 font-mono tabular-nums">
+                  +{monthlyHoursSaved} h
+                </span>
+                <span className="block text-[10px] text-slate-400">por mês</span>
               </div>
             </div>
+
+            <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-950/80 border border-slate-800/80">
+              <div className="flex items-center gap-2.5">
+                <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">
+                  <TrendingUp className="h-4 w-4" />
+                </div>
+                <div>
+                  <span className="text-xs text-slate-400 block">Estimativa de valor que pode deixar de perder</span>
+                  <span className="text-sm font-semibold text-slate-200">No-shows + horas úteis</span>
+                </div>
+              </div>
+              <div className="text-right">
+                <span className="text-xl font-extrabold text-emerald-400 font-mono tabular-nums">
+                  +{estimatedRevenueGained} €
+                </span>
+                <span className="block text-[10px] text-slate-400">estimativa/mês</span>
+              </div>
+            </div>
+
+            {/* Aviso claro */}
+            <div className="p-3 rounded-xl bg-amber-950/40 border border-amber-800/50 text-xs text-amber-200/90 leading-relaxed">
+              <strong className="text-amber-300">Atenção:</strong> estes números são apenas uma simulação. 
+              O resultado real depende da forma como o seu negócio funciona e da utilização da plataforma.
+            </div>
+        </div>
 
           </div>
 

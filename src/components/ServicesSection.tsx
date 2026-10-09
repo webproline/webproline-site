@@ -38,7 +38,7 @@ export const ServicesSection: React.FC = () => {
     {
       id: 'ecommerce',
       number: '02',
-      title: 'E-commerce & Lojas de Alta Conversão',
+      title: 'E-commerce & Lojas Online',
       subtitle: 'Comércio Local, Garrafeiras, Vestuário e Fabricantes',
       summary: 'Lojas online rápidas que carregam em menos de 0.8s, preparadas para vender em Portugal com pagamentos sem fricção.',
       highlight: 'Checkout simplificado com MB WAY e Multibanco em 1 clique',

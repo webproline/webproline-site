@@ -81,14 +81,14 @@ export const AboutUs: React.FC = () => {
               <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
                 <span className="text-rose-400 font-semibold text-xs block mb-1">❌ O Problema Habitual</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Plataformas de marketplace genéricas que cobram comissões por cada cliente marcado, ou sites em templates lentos que quebram com a primeira atualização.
+                  Plataformas genéricas que cobram comissões por cada marcação, ou sites feitos com modelos prontos que ficam lentos e difíceis de manter.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-800/40">
                 <span className="text-cyan-400 font-semibold text-xs block mb-1">✅ A Abordagem WebProLine</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Sistemas proprietários, leves e rápidos. Sem intermediários, sem comissões abusivas e feitos à medida da rotina real do seu negócio.
+                  Sistemas feitos à medida, leves e rápidos. Sem intermediários, sem comissões e adaptados à rotina real do seu negócio.
                 </p>
               </div>
             </div>
@@ -101,8 +101,8 @@ export const AboutUs: React.FC = () => {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <h5 className="text-sm font-semibold text-white">Zero jargão incompreensível</h5>
-                  <p className="text-xs text-slate-400 mt-0.5">Explicamos o funcionamento em termos claros de negócio: quanto tempo poupa e quanto passa a faturar.</p>
+                  <h5 className="text-sm font-semibold text-white">Linguagem clara e direta</h5>
+                  <p className="text-xs text-slate-400 mt-0.5">Explicamos tudo em termos de negócio: quanto tempo poupa e quanto pode passar a faturar.</p>
                 </div>
               </div>
 

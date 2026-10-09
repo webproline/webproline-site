@@ -22,12 +22,12 @@ export const Navbar: React.FC = () => {
           className="flex items-center transition-opacity hover:opacity-90"
         >
           <img
-            src="/logo_webproline_256.png"
-            alt="WebProLine"
-            width={56}
-            height={56}
-            className="h-14 w-14 rounded-full"
-          />
+          src="/logo_webproline_256.png"
+          alt="WebProLine"
+          width={72}
+          height={72}
+          className="h-16 w-16 sm:h-18 sm:w-18 rounded-full"
+        />
         </a>
 
         {/* Zone 2: 4-6 clean text navigation links */}
