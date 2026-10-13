@@ -31,11 +31,11 @@ export const CaseStudiesSection: React.FC = () => {
             >
               {/* Image (se existir) */}
               {cs.image && (
-                <div className="relative w-full aspect-[16/10] bg-slate-950 overflow-hidden flex items-start justify-center">
+               <div className="relative w-full aspect-[16/10] bg-slate-950 overflow-hidden">
               <img
                 src={cs.image}
                 alt={cs.title}
-                className="w-full h-full object-contain object-top"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
             </div>
