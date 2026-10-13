@@ -281,8 +281,8 @@ export const CASE_STUDIES = [
     quote: 'Fez um ótimo trabalho. Sempre proativa, nunca recusou pedidos de alteração e ainda propôs melhorias que acrescentaram valor real à plataforma.',
     author: 'Eng. Pedro Carvalho',
     role: 'Orientador Externo · iTEC (Iberiana Technical)',
-    image: null, // sem print público
-    link: null,
+    image: '/images/portfolio/itec.png',
+    link: null, // site já não está no ar
   },
   {
     title: 'MaisForce Innovation',
@@ -295,7 +295,7 @@ export const CASE_STUDIES = [
     quote: null,
     author: null,
     role: null,
-    image: '/images/portfolio/maisforce.jpg',
+    image: '/images/portfolio/maisforce1.jpg',
     link: null, // site já não está no ar
   },
   {
@@ -309,7 +309,7 @@ export const CASE_STUDIES = [
     quote: null,
     author: null,
     role: null,
-    image: '/images/portfolio/bentex.jpg',
+    image: '/images/portfolio/bentex1.jpg',
     link: 'https://bentexbraga.com',
   },
   {
@@ -323,7 +323,7 @@ export const CASE_STUDIES = [
     quote: null,
     author: null,
     role: null,
-    image: '/images/portfolio/visaolider.jpg',
+    image: '/images/portfolio/visaolider1.jpg',
     link: 'https://visaolider.pt',
   },
 ];
