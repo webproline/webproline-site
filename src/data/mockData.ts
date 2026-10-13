@@ -295,7 +295,7 @@ export const CASE_STUDIES = [
     quote: null,
     author: null,
     role: null,
-    image: '/images/portfolio/maisforce1.jpg',
+    image: '/images/portfolio/maisforce1.png',
     link: null, // site já não está no ar
   },
   {
@@ -309,7 +309,7 @@ export const CASE_STUDIES = [
     quote: null,
     author: null,
     role: null,
-    image: '/images/portfolio/bentex1.jpg',
+    image: '/images/portfolio/bentex1.png',
     link: 'https://bentexbraga.com',
   },
   {
@@ -323,7 +323,7 @@ export const CASE_STUDIES = [
     quote: null,
     author: null,
     role: null,
-    image: '/images/portfolio/visaolider1.jpg',
+    image: '/images/portfolio/visaolider1.png',
     link: 'https://visaolider.pt',
   },
 ];
