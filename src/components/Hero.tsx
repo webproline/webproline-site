@@ -34,25 +34,26 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7">
             {/* Quiet text kicker with typographic dot (Anti-pill discipline) */}
             <div className="mb-5 flex flex-wrap items-center gap-2 text-xs font-medium tracking-wider uppercase text-cyan-400">
-              <span>Engenharia de Software</span>
+              <span>ENGENHARIA DE SOFTWARE</span>
               <span aria-hidden="true" className="text-slate-600">·</span>
-              <span>Desenvolvimento Web Sob Medida</span>
+              <span>DESENVOLVIMENTO WEB</span>
               <span aria-hidden="true" className="text-slate-600">·</span>
-              <span className="text-emerald-400">Braga & Portugal</span>
+              <span className="text-emerald-400">BRAGA & PORTUGAL</span>
             </div>
+            
 
             {/* Headline with text-wrap: balance */}
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl font-display text-balance leading-[1.12]">
-              Digitalizamos o seu negócio. Plataformas web, agendamento e automação que{' '}
+              Sites, lojas online e plataformas feitas à medida{' '}
               <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent">
-                trabalham por si.
+                do seu negócio.
               </span>
             </h1>
 
             {/* Subtitle */}
             <p className="mt-6 max-w-2xl text-lg text-slate-300 sm:text-xl font-normal leading-relaxed">
-              Engenharia de software e soluções digitais sob medida para negócios que querem crescer.
-              Substitua cadernos e chamadas constantes por sistemas rápidos que os seus clientes adoram usar no telemóvel.
+              Desenvolvimento web e software pensado para ser simples de usar, rápido e fácil de manter. 
+              Desde o site da empresa até sistemas de marcação e ferramentas internas.
             </p>
 
             {/* CTAs */}
@@ -122,7 +123,7 @@ export const Hero: React.FC = () => {
                       <Zap className="h-4 w-4" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-semibold text-white">Carregamento Instantâneo & PWA</h3>
+                      <h3 className="text-sm font-semibold text-white">Abre rápido no telemóvel</h3>
                       <p className="text-xs text-slate-400 mt-0.5">O cliente clica na Bio do Instagram e agenda em 30 segundos, sem logins chatos.</p>
                     </div>
                   </div>

@@ -79,11 +79,12 @@ export const InteractiveSimulator: React.FC = () => {
             <span>Fluxo de Demonstração em Tempo Real</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display text-balance">
-            Experimente o agendamento como se fosse o seu cliente
+            Veja um exemplo de plataforma de marcações
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Clique no smartphone interativo abaixo. Veja a facilidade de escolha, a ausência de burocracias e como a confirmação é instantânea.
-          </p>
+        <p className="mt-3 text-sm text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          O simulador mostra um exemplo de sistema de agendamento. 
+          Se o seu negócio precisar de um site, uma loja online ou uma ferramenta interna, o processo é o mesmo: analisamos a necessidade e construímos à medida.
+        </p>
 
           {/* Sector Switcher Tabs */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
