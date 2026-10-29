@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
               />
             </Link>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              Desenvolvimento web em Braga. A plataforma de agendamento para barbearias está em desenvolvimento.
+              Websites, lojas online e plataformas web para negócios de diferentes áreas. Com base em Braga, Portugal.
             </p>
             <div className="flex items-center gap-3 text-xs text-slate-400 pt-1">
               <span className="flex items-center gap-1">
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
             </li>
             <li>
               <Link to="/simulador" className="hover:text-cyan-400 transition-colors">
-                Demonstração da plataforma
+                Demonstração de agendamento
               </Link>
             </li>
             <li>

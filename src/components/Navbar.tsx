@@ -8,10 +8,10 @@ export const Navbar: React.FC = () => {
 
     const navLinks = [
       { label: 'Soluções', to: '/solucoes' },
-      { label: 'A plataforma', to: '/simulador' },
-      { label: 'Serviços', to: '/solucoes' },
-      { label: 'Projetos', to: '/resultados' },
-      { label: 'Sobre', to: '/sobre' },
+      { label: 'Resultados', to: '/resultados' },
+      { label: 'Sobre Nós', to: '/sobre' },
+      { label: 'Simulador', to: '/simulador' },
+      { label: 'Diagnóstico', to: '/diagnostico' },
     ];
 
   const isActive = (path: string) => location.pathname === path;

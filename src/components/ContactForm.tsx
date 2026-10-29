@@ -39,17 +39,17 @@ export const ContactForm: React.FC = () => {
   const businessOptions = [
     { value: 'barbershop', label: 'Barbearia / Salão / Estética' },
     { value: 'clinic', label: 'Clínica / Saúde / Consultório' },
-    { value: 'restaurant', label: 'Restaurante / Café / Hospitalidade' },
-    { value: 'retail', label: 'Comércio Local / Loja Online' },
+    { value: 'restaurant', label: 'Café / Pastelaria / Restaurante' },
+    { value: 'retail', label: 'Loja / Comércio / Loja online' },
     { value: 'industry_sme', label: 'Indústria / Oficinas / PME' },
     { value: 'other', label: 'Outro tipo de negócio' },
   ];
 
   const goalOptions = [
-    { value: 'agendamento', label: 'Plataforma de agendamento para barbearias' },
-    { value: 'site_loja', label: 'Website Moderno / Loja Online com Pagamentos' },
-    { value: 'eliminar_excel', label: 'Plataforma Interna (Eliminar Excel e Papel)' },
-    { value: 'automacao_ia', label: 'Automação de Atendimento com IA' },
+    { value: 'agendamento', label: 'Plataforma de agendamento' },
+    { value: 'site_loja', label: 'Website ou loja online' },
+    { value: 'eliminar_excel', label: 'Ferramenta para organizar processos internos' },
+    { value: 'automacao_ia', label: 'Integrações e automações' },
     { value: 'consultoria', label: 'Conversar sobre uma necessidade' },
   ];
 
@@ -101,7 +101,7 @@ export const ContactForm: React.FC = () => {
                 Vamos conversar sobre o seu negócio?
               </h2>
               <p className="mt-4 text-base text-slate-300 leading-relaxed">
-                Tem interesse na plataforma para barbearias ou noutro projeto web? Conte-nos um pouco sobre o que precisa. A mensagem será preparada no seu programa de email.
+                Tem um projeto em mente? Conte-nos um pouco sobre o seu negócio e o que gostaria de melhorar. A mensagem será preparada no seu programa de email.
               </p>
             </div>
 
@@ -284,7 +284,7 @@ export const ContactForm: React.FC = () => {
                       rows={2}
                       value={notes}
                       onChange={(e) => setNotes(e.target.value)}
-                      placeholder="Ex: Tenho 3 barbeiros e queremos parar de usar papel..."
+                      placeholder="Ex.: Quero apresentar os meus serviços online ou facilitar as marcações..."
                       className="w-full rounded-xl border border-slate-700/80 bg-slate-950 px-4 py-3 text-sm text-white placeholder-slate-500 focus:border-cyan-400 focus:outline-none transition-colors resize-none"
                     />
                   </div>

@@ -84,10 +84,10 @@ export const InteractiveSimulator: React.FC = () => {
             <span>Demonstração ilustrativa</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display text-balance">
-            Explore uma ideia para marcações online
+            Exemplo de marcação online
           </h2>
         <p className="mt-3 text-sm text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          Este protótipo interativo serve para ilustrar um possível percurso de marcação. A plataforma para barbearias está em desenvolvimento; os dados e confirmações apresentados são fictícios e não criam uma marcação real.
+          Explore um exemplo de percurso de marcação, desde a escolha do serviço até à confirmação. Os dados são demonstrativos e não criam uma reserva real. A solução pode ser adaptada a diferentes negócios de serviços.
         </p>
 
           {/* Sector Switcher Tabs */}
@@ -450,7 +450,7 @@ export const InteractiveSimulator: React.FC = () => {
                       onClick={() => handlePreFillContact(currentPreset.businessName)}
                       className="flex-1 py-2 px-3 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 transition-all cursor-pointer"
                     >
-                      <span>Quero isto no meu Negócio</span>
+                      <span>Conversar sobre um projeto semelhante</span>
                       <ArrowRight className="h-3.5 w-3.5" />
                     </button>
                   )}
@@ -467,10 +467,10 @@ export const InteractiveSimulator: React.FC = () => {
                 <span>Por Que Esta Solução Vence</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-white font-display text-balance">
-                Uma ideia simples para organizar as marcações.
+                Um percurso de marcação claro para os seus clientes.
               </h3>
               <p className="mt-3 text-slate-300 text-base leading-relaxed">
-                O objetivo é que o cliente consiga consultar serviços e horários no telemóvel. Estamos a desenvolver a plataforma e a recolher opiniões de barbeiros nesta fase.
+                Esta demonstração mostra como um cliente pode consultar serviços, escolher um horário e deixar os seus dados. Na prática, cada projeto é configurado de acordo com os serviços e a rotina da equipa.
               </p>
             </div>
 
@@ -486,7 +486,7 @@ export const InteractiveSimulator: React.FC = () => {
                       Acesso através de um link
                     </h4>
                     <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                      A demonstração ilustra como o cliente poderia iniciar uma marcação a partir de um link partilhado pela barbearia.
+                      O cliente pode chegar à página de marcação através de um link no site ou nas redes sociais do negócio.
                     </p>
                   </div>
                 </div>
@@ -502,7 +502,7 @@ export const InteractiveSimulator: React.FC = () => {
                       Horários e serviços organizados
                     </h4>
                     <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                      O protótipo mostra um percurso possível para escolher serviço, profissional e horário. As integrações e funcionalidades finais ainda estão a ser definidas.
+                      O exemplo inclui a escolha de serviço, profissional e horário. A configuração pode variar conforme as necessidades de cada negócio.
                     </p>
                   </div>
                 </div>
@@ -515,10 +515,10 @@ export const InteractiveSimulator: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-base font-semibold text-white">
-                      Desenvolvida com os barbeiros
+                      Adaptada ao negócio
                     </h4>
                     <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                      Queremos ouvir profissionais do setor antes de fechar as decisões sobre funcionalidades e modelo de utilização.
+                      Serviços, horários e equipa são diferentes em cada negócio. Definimos esses detalhes consigo no início do projeto.
                     </p>
                   </div>
                 </div>
@@ -531,7 +531,7 @@ export const InteractiveSimulator: React.FC = () => {
                 onClick={() => handlePreFillContact(currentPreset.businessName)}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm transition-all shadow-md shadow-cyan-500/20 cursor-pointer"
               >
-                <span>Pedir Sistema Semelhante para o meu Negócio</span>
+                <span>Conversar sobre um projeto semelhante</span>
                 <ArrowRight className="h-4 w-4" />
               </button>
               <span className="text-xs text-slate-400 font-medium">

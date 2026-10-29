@@ -238,7 +238,7 @@ export const NeedsCalculator: React.FC = () => {
             </div>
 
             <p className="border-t border-slate-800/80 pt-4 text-xs leading-relaxed text-slate-400">
-              Ainda estamos a desenvolver a plataforma para barbearias. Para outros setores, analisamos as necessidades antes de definir qualquer solução.
+              As necessidades e funcionalidades variam de negócio para negócio. A solução só fica definida depois de percebermos como trabalha a sua equipa.
             </p>
 
             {/* Action button */}

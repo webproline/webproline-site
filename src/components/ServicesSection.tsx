@@ -21,24 +21,24 @@ export const ServicesSection: React.FC = () => {
     {
       id: 'agendamento',
       number: '01',
-      title: 'Agendamento para barbearias',
-      subtitle: 'Projeto em desenvolvimento',
-      summary: 'Uma plataforma para os clientes consultarem serviços e horários e marcarem online. Está a ser desenvolvida com a realidade das barbearias em mente.',
-      highlight: 'Estamos a conversar com barbeiros para definir as prioridades do produto.',
+      title: 'Plataformas de agendamento',
+      subtitle: 'Barbearias, salões e outros serviços com marcação',
+      summary: 'Um exemplo de plataforma digital para consultar serviços e horários e fazer marcações online. A demonstração mostra um possível percurso do cliente.',
+      highlight: 'Cada negócio tem horários, serviços e formas de trabalhar diferentes.',
       features: [
-        'Experiência de marcação pensada para telemóveis',
-        'Serviços, duração e horários organizados de forma clara',
-        'Acesso simples através de um link partilhável',
-        'Funcionalidades e modelo de utilização a definir com os primeiros profissionais',
+        'Serviços e horários apresentados de forma clara',
+        'Percurso de marcação acessível através de um link',
+        'Possibilidade de adaptar o fluxo a diferentes equipas',
+        'Funcionalidades definidas conforme as necessidades do projeto',
       ],
-      tech: 'Em desenvolvimento · Procuramos barbeiros para testar a ideia',
+      tech: 'Demonstração interativa',
       icon: CalendarCheck,
       color: 'from-cyan-500/10 to-blue-500/10 border-cyan-500/30 text-cyan-400',
     },
     {
       id: 'ecommerce',
       number: '02',
-      title: 'E-commerce & Lojas Online',
+      title: 'Lojas online',
       subtitle: 'Comércio Local, Garrafeiras, Vestuário e Fabricantes',
       summary: 'Lojas online com catálogo, páginas de produto e um percurso de compra adequado ao negócio.',
       highlight: 'As funcionalidades e integrações são definidas conforme o projeto.',
@@ -48,41 +48,41 @@ export const ServicesSection: React.FC = () => {
         'Estrutura preparada para uma boa experiência em computador e telemóvel',
         'Opções para WooCommerce / WordPress otimizado ou plataforma sob medida ultra-leve',
       ],
-      tech: 'Next.js / WordPress WooCommerce · Gateways PT · SEO Local',
+      tech: 'Catálogo · Encomendas · Pagamentos',
       icon: ShoppingBag,
       color: 'from-emerald-500/10 to-teal-500/10 border-emerald-500/30 text-emerald-400',
     },
     {
       id: 'internas',
       number: '03',
-      title: 'Plataformas Internas & Eliminação de Excel',
+      title: 'Ferramentas internas',
       subtitle: 'Indústrias, Oficinas, Logística e Pequenas & Médias Empresas',
       summary: 'Ferramentas web para organizar informação e tarefas que hoje passam por folhas de cálculo ou processos manuais.',
       highlight: 'Começamos por perceber como a equipa trabalha e o que vale a pena simplificar.',
       features: [
         'Registo de ordens de fabrico, reparações, manutenções ou entregas em tempo real',
         'Histórico organizado de clientes, tarefas pendentes e prazos de entrega',
-        'Relatórios de desempenho e exportação instantânea para PDF ou Excel com 1 clique',
+        'Relatórios e exportação de dados, quando necessário',
         'Acessos diferenciados com permissões por função (admin, operador, motorista)',
       ],
-      tech: 'Bases de Dados Relacionais · Interfaces Touch para Fábrica · Backups Diários',
+      tech: 'Ferramentas para a equipa',
       icon: TableProperties,
       color: 'from-blue-500/10 to-indigo-500/10 border-blue-500/30 text-blue-400',
     },
     {
       id: 'automacao-ia',
       number: '04',
-      title: 'Automação de tarefas',
-      subtitle: 'Processos e atendimento',
-      summary: 'Analisamos tarefas repetitivas e avaliamos se podem ser simplificadas com integrações ou automações adequadas ao negócio.',
-      highlight: 'A tecnologia é escolhida depois de percebermos o processo.',
+      title: 'Integrações e automações',
+      subtitle: 'Tarefas repetitivas e processos digitais',
+      summary: 'Identificamos tarefas que podem ser simplificadas com integrações entre ferramentas e processos digitais adequados ao negócio.',
+      highlight: 'Primeiro percebemos o processo; depois propomos uma solução.',
       features: [
-        'Respostas imediatas a preços, horários de funcionamento, localização e serviços',
-        'Qualificação de pedidos de orçamento com recolha prévia de requisitos',
-        'Integração com o seu CRM ou folha de gestão para registar novas oportunidades',
-        'Transição suave para atendimento humano sempre que o caso exigir atenção pessoal',
+        'Ligação entre ferramentas que já utiliza',
+        'Redução de tarefas manuais repetitivas',
+        'Organização de pedidos e informação',
+        'Âmbito definido caso a caso',
       ],
-      tech: 'Inteligência Artificial Personalizada · WhatsApp Cloud · Webhooks',
+      tech: 'Integrações · Processos digitais',
       icon: Bot,
       color: 'from-purple-500/10 to-pink-500/10 border-purple-500/30 text-purple-400',
     },
@@ -111,7 +111,7 @@ export const ServicesSection: React.FC = () => {
             Soluções digitais para necessidades concretas
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            A plataforma para barbearias está em desenvolvimento. Também trabalhamos em websites, lojas online e ferramentas internas, com âmbito e funcionalidades definidos em conjunto.
+            Trabalhamos com empresas de diferentes áreas. Antes de começar, conversamos sobre o negócio e definimos o âmbito e as funcionalidades do projeto.
           </p>
         </div>
 
@@ -162,7 +162,7 @@ export const ServicesSection: React.FC = () => {
                   </ul>
                 </div>
 
-                {/* Footer of Card: Tech stack + CTA */}
+                  {/* Card footer and CTA */}
                 <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
                   <span className="text-[11px] font-mono text-slate-400 truncate max-w-[220px]">
                     {svc.tech}

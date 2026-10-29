@@ -39,7 +39,7 @@ export const AboutUs: React.FC = () => {
                     WebProLine
                   </h3>
                   <p className="text-xs text-slate-300">
-                    Desenvolvimento web em Braga
+                    Websites e plataformas web
                   </p>
                 </div>
               </div>
@@ -61,26 +61,26 @@ export const AboutUs: React.FC = () => {
                 <span>Sobre a WebProLine</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white font-display text-balance">
-                Tecnologia feita com atenção a quem a vai usar
+                Soluções digitais para o dia a dia das empresas
               </h2>
             </div>
 
             <p className="text-base text-slate-300 leading-relaxed">
-              A <strong>WebProLine</strong> é um projeto de desenvolvimento web sediado em Braga. Estamos a criar uma plataforma de agendamento para barbearias e queremos que os profissionais do setor participem na definição do que é realmente útil.
+              A <strong>WebProLine</strong> desenvolve websites, lojas online e plataformas web para empresas de diferentes áreas. No portefólio encontrará projetos de comércio eletrónico, indústria e sites institucionais, além de uma demonstração de agendamento online.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
-                  <span className="text-slate-200 font-semibold text-xs block mb-1">O ponto de partida</span>
+                <span className="text-slate-200 font-semibold text-xs block mb-1">Cada negócio é diferente</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Cada barbearia tem a sua forma de organizar serviços, horários e equipa. Uma ferramenta deve respeitar essa rotina.
+                  Uma loja, um café e uma equipa de serviços têm necessidades próprias. A solução deve ajustar-se à forma como o negócio funciona.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-800/40">
-                  <span className="text-cyan-400 font-semibold text-xs block mb-1">Como estamos a trabalhar</span>
+                <span className="text-cyan-400 font-semibold text-xs block mb-1">Como trabalhamos</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Estamos a falar com barbeiros enquanto desenvolvemos a plataforma. O produto está em desenvolvimento e as funcionalidades serão apresentadas com clareza.
+                  Ouvimos o que precisa, definimos o âmbito do projeto e explicamos as opções com clareza, do primeiro contacto à entrega.
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export const AboutUs: React.FC = () => {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                    <h5 className="text-sm font-semibold text-white">Âmbito claro</h5>
+                  <h5 className="text-sm font-semibold text-white">Âmbito claro</h5>
                   <p className="text-xs text-slate-400 mt-0.5">
                     Antes de avançar com um projeto, definimos em conjunto o que será feito e as condições de utilização.
                   </p>
@@ -103,7 +103,7 @@ export const AboutUs: React.FC = () => {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                    <h5 className="text-sm font-semibold text-white">Conversa direta</h5>
+                  <h5 className="text-sm font-semibold text-white">Conversa direta</h5>
                   <p className="text-xs text-slate-400 mt-0.5">
                     Falamos sobre as necessidades do negócio sem complicar com termos técnicos desnecessários.
                   </p>
@@ -113,7 +113,7 @@ export const AboutUs: React.FC = () => {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                    <h5 className="text-sm font-semibold text-white">Contacto próximo</h5>
+                  <h5 className="text-sm font-semibold text-white">Contacto próximo</h5>
                   <p className="text-xs text-slate-400 mt-0.5">
                     Estamos em Braga e disponíveis para conversar presencialmente na região ou online.
                   </p>

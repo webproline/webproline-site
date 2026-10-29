@@ -1,6 +1,6 @@
 {
-  "name": "WebProLine | Agendamento online para barbearias",
-  "description": "A WebProLine está a desenvolver uma plataforma de agendamento para barbearias em Braga, Portugal.",
+  "name": "WebProLine | Websites e plataformas web à medida",
+  "description": "Websites, lojas online e plataformas web para empresas de diferentes áreas. WebProLine, Braga, Portugal.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
