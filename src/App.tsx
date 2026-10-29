@@ -4,30 +4,35 @@
  */
 
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { InteractiveSimulator } from './components/InteractiveSimulator';
-import { NeedsCalculator } from './components/NeedsCalculator';
-import { ServicesSection } from './components/ServicesSection';
-import { AboutUs } from './components/AboutUs';
-import { CaseStudiesSection } from './components/CaseStudiesSection';
-import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
+import { HomePage } from './pages/Home';
+import { SimuladorPage } from './pages/Simulador';
+import { DiagnosticoPage } from './pages/Diagnostico';
+import { SolucoesPage } from './pages/Solucoes';
+import { SobrePage } from './pages/Sobre';
+import { ResultadosPage } from './pages/Resultados';
+import { ContactoPage } from './pages/Contacto';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-cyan-500/20 selection:text-cyan-300">
-      <Navbar />
-      <main className="flex-1">
-        <Hero />
-        <InteractiveSimulator />
-        <NeedsCalculator />
-        <ServicesSection />
-        <AboutUs />
-        <CaseStudiesSection />
-        <ContactForm />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-cyan-500/20 selection:text-cyan-300">
+        <Navbar />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/simulador" element={<SimuladorPage />} />
+            <Route path="/diagnostico" element={<DiagnosticoPage />} />
+            <Route path="/solucoes" element={<SolucoesPage />} />
+            <Route path="/sobre" element={<SobrePage />} />
+            <Route path="/resultados" element={<ResultadosPage />} />
+            <Route path="/contacto" element={<ContactoPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

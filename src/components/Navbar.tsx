@@ -1,60 +1,67 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { MessageSquareCode, Menu, X, ArrowUpRight } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
-    { label: 'Simulador', href: '#simulador' },
-    { label: 'Diagnóstico', href: '#diagnostico' },
-    { label: 'Soluções', href: '#solucoes' },
-    { label: 'Sobre Nós', href: '#sobre' },
-    { label: 'Resultados', href: '#resultados' },
+    { label: 'Simulador', to: '/simulador' },
+    { label: 'Diagnóstico', to: '/diagnostico' },
+    { label: 'Soluções', to: '/solucoes' },
+    { label: 'Sobre Nós', to: '/sobre' },
+    { label: 'Resultados', to: '/resultados' },
   ];
+
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Zone 1: Logo */}
-        <a
-          href="#"
+        {/* Logo */}
+        <Link
+          to="/"
           aria-label="WebProLine — página inicial"
           className="flex items-center transition-opacity hover:opacity-90"
         >
           <img
-          src="/logo_webproline_256.png"
-          alt="WebProLine"
-          width={72}
-          height={72}
-          className="h-16 w-16 sm:h-18 sm:w-18 rounded-full"
-        />
-        </a>
+            src="/logo_webproline_256.png"
+            alt="WebProLine"
+            width={56}
+            height={56}
+            className="h-14 w-14 rounded-full"
+          />
+        </Link>
 
-        {/* Zone 2: 4-6 clean text navigation links */}
+        {/* Desktop nav */}
         <nav className="hidden items-center gap-8 text-sm font-medium text-slate-300 md:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
-              className="relative py-1 text-slate-300 transition-colors hover:text-white after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-cyan-400 after:transition-all hover:after:w-full"
+              to={link.to}
+              className={`relative py-1 transition-colors after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-cyan-400 after:transition-all ${
+                isActive(link.to)
+                  ? 'text-white after:w-full'
+                  : 'text-slate-300 hover:text-white after:w-0 hover:after:w-full'
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
-        {/* Zone 3: 1-2 primary actions */}
+        {/* CTA + mobile toggle */}
         <div className="flex items-center gap-3">
-          <a
-            href="#contacto"
+          <Link
+            to="/contacto"
             className="hidden sm:inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-950 transition-all hover:bg-cyan-400 active:scale-95 shadow-sm shadow-cyan-500/20 whitespace-nowrap cursor-pointer"
           >
             <MessageSquareCode className="h-4 w-4" />
             <span>Entrar em contacto</span>
             <ArrowUpRight className="h-3.5 w-3.5 opacity-70" />
-          </a>
+          </Link>
 
-          {/* Mobile hamburger toggle */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -66,29 +73,31 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile drawer */}
+      {/* Mobile menu */}
       {mobileMenuOpen && (
         <div className="border-b border-slate-800 bg-slate-950 px-4 py-6 md:hidden">
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.to}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-slate-200 transition-colors hover:text-cyan-400"
+                className={`text-base font-medium transition-colors ${
+                  isActive(link.to) ? 'text-cyan-400' : 'text-slate-200 hover:text-cyan-400'
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="pt-2">
-              <a
-                href="#contacto"
+              <Link
+                to="/contacto"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex w-full items-center justify-center gap-2 rounded-lg bg-cyan-500 px-4 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-400 cursor-pointer"
               >
                 <MessageSquareCode className="h-4 w-4" />
                 <span>Entrar em contacto</span>
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
