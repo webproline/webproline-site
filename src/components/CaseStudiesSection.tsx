@@ -30,15 +30,15 @@ export const CaseStudiesSection: React.FC = () => {
               className="flex flex-col rounded-2xl border border-slate-800 bg-slate-950/80 overflow-hidden transition-all hover:border-slate-700 hover:shadow-xl"
             >
               {/* Image (se existir) */}
-              {cs.image && (
-               <div className="relative w-full aspect-[4/3] bg-slate-950 overflow-hidden">
-              <img
-                src={cs.image}
-                alt={cs.title}
-                className="w-full h-full object-cover object-top"
-                loading="lazy"
-              />
-            </div>
+             {cs.image && (
+                <div className="relative w-full aspect-[3/2] bg-slate-950 overflow-hidden">
+                  <img
+                    src={cs.image}
+                    alt={cs.title}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
               )}
 
               <div className="flex flex-col flex-1 p-6 sm:p-7">

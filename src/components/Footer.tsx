@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUp, Mail, MapPin, Instagram } from 'lucide-react';
 import { COMPANY_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '../data/contact';
 
@@ -13,9 +14,9 @@ export const Footer: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800/80">
           
-          {/* Brand Col */}
+          {/* Brand */}
           <div className="md:col-span-2 space-y-3">
-            <a href="#" aria-label="WebProLine — página inicial" className="inline-block">
+            <Link to="/" aria-label="WebProLine — página inicial" className="inline-block">
               <img
                 src="/logo_webproline_256.png"
                 alt="WebProLine"
@@ -23,9 +24,9 @@ export const Footer: React.FC = () => {
                 height={64}
                 className="h-16 w-16 rounded-full"
               />
-            </a>
+            </Link>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
-              Engenharia de software e plataformas digitais sob medida para negócios locais e PMEs. Desenvolvido em Braga, Portugal.
+              Desenvolvimento web em Braga. A plataforma de agendamento para barbearias está em desenvolvimento.
             </p>
             <div className="flex items-center gap-3 text-xs text-slate-400 pt-1">
               <span className="flex items-center gap-1">
@@ -42,41 +43,41 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <div className="space-y-2.5">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200">
-              Navegação
-            </h4>
-            <ul className="space-y-2 text-xs">
-              <li>
-                <a href="#simulador" className="hover:text-cyan-400 transition-colors">
-                  Simulador de Agendamento
-                </a>
-              </li>
-              <li>
-                <a href="#diagnostico" className="hover:text-cyan-400 transition-colors">
-                  Calculadora de Poupança
-                </a>
-              </li>
-              <li>
-                <a href="#solucoes" className="hover:text-cyan-400 transition-colors">
-                  Soluções & Serviços
-                </a>
-              </li>
-              <li>
-                <a href="#sobre" className="hover:text-cyan-400 transition-colors">
-                  Sobre Nós
-                </a>
-              </li>
-              <li>
-                <a href="#resultados" className="hover:text-cyan-400 transition-colors">
-                  Casos de Sucesso
-                </a>
-              </li>
-            </ul>
-          </div>
+          {/* Navigation */}
+          <ul className="space-y-2 text-xs">
+            <li>
+              <Link to="/solucoes" className="hover:text-cyan-400 transition-colors">
+                Soluções & Serviços
+              </Link>
+            </li>
+            <li>
+              <Link to="/resultados" className="hover:text-cyan-400 transition-colors">
+                Trabalhos Realizados
+              </Link>
+            </li>
+            <li>
+              <Link to="/sobre" className="hover:text-cyan-400 transition-colors">
+                Sobre Nós
+              </Link>
+            </li>
+            <li>
+              <Link to="/simulador" className="hover:text-cyan-400 transition-colors">
+                Demonstração da plataforma
+              </Link>
+            </li>
+            <li>
+              <Link to="/diagnostico" className="hover:text-cyan-400 transition-colors">
+                Diagnóstico inicial
+              </Link>
+            </li>
+            <li>
+              <Link to="/contacto" className="hover:text-cyan-400 transition-colors">
+                Contacto
+              </Link>
+            </li>
+          </ul>
 
-          {/* Direct Actions */}
+          {/* Contacto rápido */}
           <div className="space-y-2.5">
             <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-200">
               Contacto Rápido

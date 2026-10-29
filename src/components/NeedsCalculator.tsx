@@ -23,10 +23,7 @@ export const NeedsCalculator: React.FC = () => {
   const diagnostic: SectorDiagnostic = 
     SECTOR_DIAGNOSTICS.find((s) => s.id === selectedSector) || SECTOR_DIAGNOSTICS[0];
 
-  // Calculated benefits
-  const monthlyHoursSaved = Math.round(weeklyHoursLost * 0.75 * 4.3); // 75% of administrative phone time saved
-  const estimatedRecoveredNoShows = Math.round(weeklyAppointments * 0.08 * 4.3); // 8% no-show reduction
-  const estimatedRevenueGained = Math.round(monthlyHoursSaved * 18 + estimatedRecoveredNoShows * 22);
+  // Show the user's own inputs; do not present unsupported savings projections.
 
   const getSectorIcon = (id: BusinessSector) => {
     switch (id) {
@@ -64,16 +61,13 @@ export const NeedsCalculator: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="mb-3 flex items-center justify-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
             <Calculator className="h-3.5 w-3.5" />
-            <span>Diagnóstico Rápido</span>
-            <span aria-hidden="true" className="text-slate-600">·</span>
-            <span>Calculadora de Benefícios & ROI</span>
+            <span>Uma primeira reflexão</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display text-balance">
-            Estimativa de tempo e dinheiro que o seu negócio pode poupar
+            Onde perde mais tempo na gestão?
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Estes valores são apenas uma estimativa com base nos dados que indicar. 
-            Não são uma garantia nem uma promessa de resultados. 
+            Indique o tempo que dedica a tarefas administrativas e o volume de atendimentos. Não calculamos poupanças presumidas: usamos estas respostas para iniciar uma conversa sobre o que pode ser melhorado.
           </p>
         </div>
 
@@ -123,7 +117,7 @@ export const NeedsCalculator: React.FC = () => {
             {/* Slider 1: Hours spent manually */}
             <div>
               <div className="flex justify-between items-center mb-2 text-sm">
-                <span className="text-slate-300 font-medium">Horas/semana em telemóvel/papel:</span>
+              <span className="text-slate-300 font-medium">Horas por semana em chamadas e gestão:</span>
                 <span className="font-mono text-cyan-400 font-bold text-base tabular-nums">
                   {weeklyHoursLost} h
                 </span>
@@ -147,7 +141,7 @@ export const NeedsCalculator: React.FC = () => {
             {/* Slider 2: Weekly clients/volume */}
             <div>
               <div className="flex justify-between items-center mb-2 text-sm">
-                <span className="text-slate-300 font-medium">Clientes ou atendimentos/semana:</span>
+              <span className="text-slate-300 font-medium">Atendimentos por semana:</span>
                 <span className="font-mono text-emerald-400 font-bold text-base tabular-nums">
                   {weeklyAppointments}
                 </span>
@@ -176,15 +170,15 @@ export const NeedsCalculator: React.FC = () => {
                   <Clock className="h-4 w-4" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block">Estimativa de horas que pode deixar de gastar</span>
-                  <span className="text-sm font-semibold text-slate-200">Menos interrupções</span>
+                  <span className="text-xs text-slate-400 block">Tempo dedicado atualmente</span>
+                  <span className="text-sm font-semibold text-slate-200">Segundo a sua estimativa</span>
                 </div>
               </div>
               <div className="text-right">
                 <span className="text-xl font-extrabold text-cyan-400 font-mono tabular-nums">
-                  +{monthlyHoursSaved} h
+                  {weeklyHoursLost} h
                 </span>
-                <span className="block text-[10px] text-slate-400">por mês</span>
+                <span className="block text-[10px] text-slate-400">por semana</span>
               </div>
             </div>
 
@@ -194,22 +188,21 @@ export const NeedsCalculator: React.FC = () => {
                   <TrendingUp className="h-4 w-4" />
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 block">Estimativa de valor que pode deixar de perder</span>
-                  <span className="text-sm font-semibold text-slate-200">No-shows + horas úteis</span>
+                  <span className="text-xs text-slate-400 block">Volume de atendimentos</span>
+                  <span className="text-sm font-semibold text-slate-200">Segundo a sua estimativa</span>
                 </div>
               </div>
               <div className="text-right">
                 <span className="text-xl font-extrabold text-emerald-400 font-mono tabular-nums">
-                  +{estimatedRevenueGained} €
+                  {weeklyAppointments}
                 </span>
-                <span className="block text-[10px] text-slate-400">estimativa/mês</span>
+                <span className="block text-[10px] text-slate-400">por semana</span>
               </div>
             </div>
 
             {/* Aviso claro */}
             <div className="p-3 rounded-xl bg-amber-950/40 border border-amber-800/50 text-xs text-amber-200/90 leading-relaxed">
-              <strong className="text-amber-300">Atenção:</strong> estes números são apenas uma simulação. 
-              O resultado real depende da forma como o seu negócio funciona e da utilização da plataforma.
+              Estes valores são as respostas que indicou, não previsões de poupança ou resultados.
             </div>
         </div>
 
@@ -219,7 +212,7 @@ export const NeedsCalculator: React.FC = () => {
           <div className="lg:col-span-7 p-6 sm:p-8 rounded-2xl border border-cyan-900/50 bg-gradient-to-br from-slate-900 to-slate-950 space-y-6 shadow-xl">
             <div>
               <div className="flex items-center gap-2 text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-2">
-                <span>Solução WebProLine Recomendada</span>
+                <span>Possível área de trabalho</span>
               </div>
               <h3 className="text-2xl font-bold text-white font-display">
                 {diagnostic.recommendedSolution}
@@ -232,7 +225,7 @@ export const NeedsCalculator: React.FC = () => {
             {/* Key Benefits List */}
             <div>
               <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">
-                Benefícios Práticos Imediatos:
+                Pontos a explorar:
               </h4>
               <ul className="space-y-2.5">
                 {diagnostic.keyBenefits.map((benefit, i) => (
@@ -244,22 +237,9 @@ export const NeedsCalculator: React.FC = () => {
               </ul>
             </div>
 
-            {/* Architecture specifics (Zero-pill text separators) */}
-            <div className="pt-4 border-t border-slate-800/80">
-              <span className="text-xs text-slate-400 block mb-2 font-medium">
-                Especificação da Arquitetura:
-              </span>
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-300 font-mono">
-                {diagnostic.techStack.map((tech, index) => (
-                  <React.Fragment key={tech}>
-                    <span className="text-cyan-300">{tech}</span>
-                    {index < diagnostic.techStack.length - 1 && (
-                      <span aria-hidden="true" className="text-slate-600">·</span>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
+            <p className="border-t border-slate-800/80 pt-4 text-xs leading-relaxed text-slate-400">
+              Ainda estamos a desenvolver a plataforma para barbearias. Para outros setores, analisamos as necessidades antes de definir qualquer solução.
+            </p>
 
             {/* Action button */}
             <div className="pt-2">
@@ -267,7 +247,7 @@ export const NeedsCalculator: React.FC = () => {
                 onClick={handleSelectSolution}
                 className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-sm font-bold text-slate-950 shadow-md shadow-cyan-500/20 transition-all hover:brightness-110 active:scale-[0.99] cursor-pointer"
               >
-                <span>Pedir Proposta para esta Solução</span>
+                <span>Conversar sobre esta necessidade</span>
                 <ArrowRight className="h-4 w-4" />
               </button>
             </div>

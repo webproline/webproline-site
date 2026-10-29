@@ -46,11 +46,11 @@ export const ContactForm: React.FC = () => {
   ];
 
   const goalOptions = [
-    { value: 'agendamento', label: 'Sistema de Agendamento Online Automático' },
+    { value: 'agendamento', label: 'Plataforma de agendamento para barbearias' },
     { value: 'site_loja', label: 'Website Moderno / Loja Online com Pagamentos' },
     { value: 'eliminar_excel', label: 'Plataforma Interna (Eliminar Excel e Papel)' },
     { value: 'automacao_ia', label: 'Automação de Atendimento com IA' },
-    { value: 'consultoria', label: 'Diagnóstico Geral e Avaliação Gratuita' },
+    { value: 'consultoria', label: 'Conversar sobre uma necessidade' },
   ];
 
   const buildMessageBody = () => {
@@ -95,15 +95,13 @@ export const ContactForm: React.FC = () => {
           <div className="lg:col-span-5 space-y-8">
             <div>
               <div className="mb-3 flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
-                <span>Contacto Direto</span>
-                <span aria-hidden="true" className="text-slate-600">·</span>
-                <span>Sem Intermediários</span>
+                <span>Contacto</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white font-display text-balance">
                 Vamos conversar sobre o seu negócio?
               </h2>
               <p className="mt-4 text-base text-slate-300 leading-relaxed">
-                Envie uma mensagem rápida. Respondemos diretamente por email ou Instagram com um diagnóstico claro e estimativa de investimento, sem compromisso.
+                Tem interesse na plataforma para barbearias ou noutro projeto web? Conte-nos um pouco sobre o que precisa. A mensagem será preparada no seu programa de email.
               </p>
             </div>
 
@@ -166,7 +164,7 @@ export const ContactForm: React.FC = () => {
             {/* Guarantee note */}
             <div className="pt-2 flex items-center gap-2 text-xs text-slate-400">
               <ShieldCheck className="h-4 w-4 text-emerald-400 shrink-0" />
-              <span>Privacidade garantida. Os seus dados não são partilhados com terceiros.</span>
+              <span>Os dados preenchidos não são enviados automaticamente. A mensagem só segue quando a enviar no seu programa de email.</span>
             </div>
           </div>
 
@@ -180,7 +178,7 @@ export const ContactForm: React.FC = () => {
                     <CheckCircle2 className="h-7 w-7" />
                   </div>
                   <h3 className="text-2xl font-bold text-white font-display">
-                    Mensagem Preparada com Sucesso!
+                    Email preparado
                   </h3>
                   <p className="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
                     Obrigado pelo interesse, <strong>{name}</strong>! Se a sua aplicação de email abriu com a mensagem pronta, basta enviá-la. Responderemos o mais brevemente possível.
@@ -197,11 +195,11 @@ export const ContactForm: React.FC = () => {
               ) : (
                 <form className="space-y-5" onSubmit={handleSendEmail}>
                   <div>
-                    <h3 className="text-xl font-bold text-white font-display">
-                      Formulário Rápido de Diagnóstico
+                      <h3 className="text-xl font-bold text-white font-display">
+                      Envie-nos uma mensagem
                     </h3>
                     <p className="text-xs text-slate-400 mt-1">
-                      Preencha os campos abaixo para gerar uma mensagem pronta a enviar por email:
+                      Ao continuar, abrimos o seu programa de email com os detalhes que indicar.
                     </p>
                   </div>
 

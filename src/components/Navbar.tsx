@@ -6,13 +6,13 @@ export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navLinks = [
-    { label: 'Simulador', to: '/simulador' },
-    { label: 'Diagnóstico', to: '/diagnostico' },
-    { label: 'Soluções', to: '/solucoes' },
-    { label: 'Sobre Nós', to: '/sobre' },
-    { label: 'Resultados', to: '/resultados' },
-  ];
+    const navLinks = [
+      { label: 'Soluções', to: '/solucoes' },
+      { label: 'A plataforma', to: '/simulador' },
+      { label: 'Serviços', to: '/solucoes' },
+      { label: 'Projetos', to: '/resultados' },
+      { label: 'Sobre', to: '/sobre' },
+    ];
 
   const isActive = (path: string) => location.pathname === path;
 

@@ -21,17 +21,17 @@ export const ServicesSection: React.FC = () => {
     {
       id: 'agendamento',
       number: '01',
-      title: 'Sistemas de Agendamento Inteligente',
-      subtitle: 'Barbearias, Clínicas de Saúde, Cabeleireiros e Terapeutas',
-      summary: 'Diga adeus às interrupções a meio do trabalho e aos esquecimentos dos clientes com um fluxo de marcação rápido na web.',
-      highlight: '92% de redução em faltas com lembretes automáticos no WhatsApp',
+      title: 'Agendamento para barbearias',
+      subtitle: 'Projeto em desenvolvimento',
+      summary: 'Uma plataforma para os clientes consultarem serviços e horários e marcarem online. Está a ser desenvolvida com a realidade das barbearias em mente.',
+      highlight: 'Estamos a conversar com barbeiros para definir as prioridades do produto.',
       features: [
-        'Acesso direto via link da Bio do Instagram, Facebook e Google Meu Negócio',
-        'Sem comissões por cliente ou mensalidades por cada funcionário da equipa',
-        'Sincronização bidirecional em tempo real com o Google Calendar',
-        'Gestão de horários de múltiplos colaboradores, serviços com durações e preços distintos',
+        'Experiência de marcação pensada para telemóveis',
+        'Serviços, duração e horários organizados de forma clara',
+        'Acesso simples através de um link partilhável',
+        'Funcionalidades e modelo de utilização a definir com os primeiros profissionais',
       ],
-      tech: 'Web App PWA · WhatsApp API · Google Calendar Sync',
+      tech: 'Em desenvolvimento · Procuramos barbeiros para testar a ideia',
       icon: CalendarCheck,
       color: 'from-cyan-500/10 to-blue-500/10 border-cyan-500/30 text-cyan-400',
     },
@@ -40,12 +40,12 @@ export const ServicesSection: React.FC = () => {
       number: '02',
       title: 'E-commerce & Lojas Online',
       subtitle: 'Comércio Local, Garrafeiras, Vestuário e Fabricantes',
-      summary: 'Lojas online rápidas que carregam em menos de 0.8s, preparadas para vender em Portugal com pagamentos sem fricção.',
-      highlight: 'Checkout simplificado com MB WAY e Multibanco em 1 clique',
+      summary: 'Lojas online com catálogo, páginas de produto e um percurso de compra adequado ao negócio.',
+      highlight: 'As funcionalidades e integrações são definidas conforme o projeto.',
       features: [
-        'Integração nativa com MB WAY, Referência Multibanco e Cartão via Stripe / Easypay',
+        'Opções de pagamento escolhidas de acordo com as necessidades do negócio',
         'Painel intuitivo para gerir stock, produtos e encomendas sem complicações',
-        'Velocidade extrema e SEO local para aparecer nos primeiros lugares de Braga e Portugal',
+        'Estrutura preparada para uma boa experiência em computador e telemóvel',
         'Opções para WooCommerce / WordPress otimizado ou plataforma sob medida ultra-leve',
       ],
       tech: 'Next.js / WordPress WooCommerce · Gateways PT · SEO Local',
@@ -57,8 +57,8 @@ export const ServicesSection: React.FC = () => {
       number: '03',
       title: 'Plataformas Internas & Eliminação de Excel',
       subtitle: 'Indústrias, Oficinas, Logística e Pequenas & Médias Empresas',
-      summary: 'Transforme folhas de cálculo dispersas e blocos de notas num sistema web único, acessível em qualquer computador, tablet ou telemóvel.',
-      highlight: 'Eliminação total de papel e redução de erros operacionais',
+      summary: 'Ferramentas web para organizar informação e tarefas que hoje passam por folhas de cálculo ou processos manuais.',
+      highlight: 'Começamos por perceber como a equipa trabalha e o que vale a pena simplificar.',
       features: [
         'Registo de ordens de fabrico, reparações, manutenções ou entregas em tempo real',
         'Histórico organizado de clientes, tarefas pendentes e prazos de entrega',
@@ -72,10 +72,10 @@ export const ServicesSection: React.FC = () => {
     {
       id: 'automacao-ia',
       number: '04',
-      title: 'Automações & Assistentes de Atendimento com IA',
-      subtitle: 'Atendimento Rápido 24/7 sem Deixar Clientes à Espera',
-      summary: 'Assistentes inteligentes no WhatsApp e Web que tiram dúvidas frequentes, qualificam pedidos e direcionam orçamentos enquanto descansa.',
-      highlight: 'Zero mensagens esquecidas fora do horário de expediente',
+      title: 'Automação de tarefas',
+      subtitle: 'Processos e atendimento',
+      summary: 'Analisamos tarefas repetitivas e avaliamos se podem ser simplificadas com integrações ou automações adequadas ao negócio.',
+      highlight: 'A tecnologia é escolhida depois de percebermos o processo.',
       features: [
         'Respostas imediatas a preços, horários de funcionamento, localização e serviços',
         'Qualificação de pedidos de orçamento com recolha prévia de requisitos',
@@ -105,15 +105,13 @@ export const ServicesSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-3xl mb-14">
           <div className="mb-3 flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
-            <span>Soluções Especializadas</span>
-            <span aria-hidden="true" className="text-slate-600">·</span>
-            <span>Engenharia Focada em Retorno</span>
+            <span>Serviços</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display text-balance">
-            Tecnologia prática concebida para fazer o seu negócio faturar mais
+            Soluções digitais para necessidades concretas
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Não criamos sites genéricos que ficam parados na internet. Desenvolvemos ferramentas funcionais que resolvem dores reais de quem trabalha todos os dias.
+            A plataforma para barbearias está em desenvolvimento. Também trabalhamos em websites, lojas online e ferramentas internas, com âmbito e funcionalidades definidos em conjunto.
           </p>
         </div>
 

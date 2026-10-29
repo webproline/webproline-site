@@ -36,12 +36,19 @@ export const InteractiveSimulator: React.FC = () => {
   const [whatsappSentPreview, setWhatsappSentPreview] = useState<boolean>(false);
 
   // Generate date options (today, tomorrow, next day)
-  const dateOptions = [
-    { label: 'Hoje', date: 'Hoje, 8 Out' },
-    { label: 'Amanhã', date: 'Amanhã, 9 Out' },
-    { label: 'Sexta', date: 'Sex, 10 Out' },
-    { label: 'Sábado', date: 'Sáb, 11 Out' },
-  ];
+  const dateOptions = Array.from({ length: 4 }, (_, index) => {
+    const date = new Date();
+    date.setDate(date.getDate() + index);
+    const label = index === 0
+      ? 'Hoje'
+      : index === 1
+        ? 'Amanhã'
+        : new Intl.DateTimeFormat('pt-PT', { weekday: 'short' }).format(date);
+    return {
+      label,
+      date: `${label}, ${new Intl.DateTimeFormat('pt-PT', { day: 'numeric', month: 'short' }).format(date)}`,
+    };
+  });
 
   const handleSectorChange = (newSector: BusinessSector) => {
     setActiveSector(newSector);
@@ -74,16 +81,13 @@ export const InteractiveSimulator: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
           <div className="mb-3 flex items-center justify-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400">
-            <span>Experiência Interativa</span>
-            <span aria-hidden="true" className="text-slate-600">·</span>
-            <span>Fluxo de Demonstração em Tempo Real</span>
+            <span>Demonstração ilustrativa</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white font-display text-balance">
-            Veja um exemplo de plataforma de marcações
+            Explore uma ideia para marcações online
           </h2>
         <p className="mt-3 text-sm text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          O simulador mostra um exemplo de sistema de agendamento. 
-          Se o seu negócio precisar de um site, uma loja online ou uma ferramenta interna, o processo é o mesmo: analisamos a necessidade e construímos à medida.
+          Este protótipo interativo serve para ilustrar um possível percurso de marcação. A plataforma para barbearias está em desenvolvimento; os dados e confirmações apresentados são fictícios e não criam uma marcação real.
         </p>
 
           {/* Sector Switcher Tabs */}
@@ -379,10 +383,10 @@ export const InteractiveSimulator: React.FC = () => {
                       
                       <div>
                         <h5 className="text-sm font-bold text-white font-display">
-                          Marcação Confirmada!
+                          Exemplo de confirmação
                         </h5>
                         <p className="text-[10px] text-slate-400 mt-0.5">
-                          Código de Reserva: <span className="font-mono text-cyan-400 font-semibold">#WPL-9821</span>
+                          <span className="font-mono text-cyan-400 font-semibold">Demonstração — sem reserva real</span>
                         </p>
                       </div>
 
@@ -390,7 +394,7 @@ export const InteractiveSimulator: React.FC = () => {
                       <div className="bg-emerald-950/40 border border-emerald-800/60 rounded-xl p-3 text-left relative overflow-hidden shadow-sm">
                         <div className="flex items-center gap-1.5 text-[10px] font-semibold text-emerald-400 mb-1.5">
                           <BellRing className="h-3 w-3" />
-                          <span>Mensagem Automática WhatsApp Enviada</span>
+                          <span>Exemplo de mensagem</span>
                         </div>
                         <p className="text-[10px] text-slate-200 leading-relaxed font-sans">
                           &quot;Olá <strong className="text-white">{clientName || 'Cliente'}</strong>! A sua marcação para <strong className="text-white">{selectedService.name}</strong> com <strong className="text-white">{selectedStaff.name}</strong> está confirmada para <strong className="text-emerald-300">{dateOptions[selectedDateIndex].date} às {selectedTime}</strong> em {currentPreset.businessName}. Clique aqui caso precise reagendar.&quot;
@@ -463,10 +467,10 @@ export const InteractiveSimulator: React.FC = () => {
                 <span>Por Que Esta Solução Vence</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-white font-display text-balance">
-                O cliente agenda em 30 segundos. Você não interrompe o trabalho.
+                Uma ideia simples para organizar as marcações.
               </h3>
               <p className="mt-3 text-slate-300 text-base leading-relaxed">
-                Esqueça os sistemas antigos que obrigavam o cliente a descarregar uma app pesada de 100MB da App Store ou a preencher formulários com passwords que ninguém se lembra.
+                O objetivo é que o cliente consiga consultar serviços e horários no telemóvel. Estamos a desenvolver a plataforma e a recolher opiniões de barbeiros nesta fase.
               </p>
             </div>
 
@@ -479,10 +483,10 @@ export const InteractiveSimulator: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-base font-semibold text-white">
-                      Acesso Instantâneo no Link do Instagram ou Google
+                      Acesso através de um link
                     </h4>
                     <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                      O cliente abre no navegador do telemóvel num piscar de olhos. Carrega em menos de 0.8 segundos e adapta-se a qualquer ecrã com a identidade visual da sua marca.
+                      A demonstração ilustra como o cliente poderia iniciar uma marcação a partir de um link partilhado pela barbearia.
                     </p>
                   </div>
                 </div>
@@ -495,10 +499,10 @@ export const InteractiveSimulator: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-base font-semibold text-white">
-                      Lembretes Automáticos por WhatsApp & SMS
+                      Horários e serviços organizados
                     </h4>
                     <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                      Mais de 90% das faltas (no-shows) acontecem por esquecimento. O sistema avisa o cliente automaticamente com opção de confirmação ou reagendamento sem lhe roubar tempo.
+                      O protótipo mostra um percurso possível para escolher serviço, profissional e horário. As integrações e funcionalidades finais ainda estão a ser definidas.
                     </p>
                   </div>
                 </div>
@@ -511,10 +515,10 @@ export const InteractiveSimulator: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-base font-semibold text-white">
-                      Zero Comissões por Cliente ou Taxas Mensais Ocultas
+                      Desenvolvida com os barbeiros
                     </h4>
                     <p className="text-sm text-slate-400 mt-1 leading-relaxed">
-                      As plataformas de marketplace cobram mensalidades por funcionário e comissões sobre os seus próprios clientes. A WebProLine constrói uma solução proprietária que é sua.
+                      Queremos ouvir profissionais do setor antes de fechar as decisões sobre funcionalidades e modelo de utilização.
                     </p>
                   </div>
                 </div>
@@ -531,7 +535,7 @@ export const InteractiveSimulator: React.FC = () => {
                 <ArrowRight className="h-4 w-4" />
               </button>
               <span className="text-xs text-slate-400 font-medium">
-                Sem compromisso · Proposta em 24h
+                Conversa inicial sem compromisso
               </span>
             </div>
 

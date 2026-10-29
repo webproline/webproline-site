@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   MapPin, 
   Mail, 
@@ -6,24 +7,18 @@ import {
   CheckCircle2, 
   Coffee
 } from 'lucide-react';
-import { COMPANY_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, buildMailto } from '../data/contact';
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '../data/contact';
 
 export const AboutUs: React.FC = () => {
-  const mailtoHref = buildMailto(
-    'Gostava de falar sobre um projeto',
-    'Olá, li a apresentação no site da WebProLine e gostava de trocar ideias sobre um projeto.'
-  );
-
   return (
     <section id="sobre" className="py-20 lg:py-28 bg-slate-950 relative border-t border-slate-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Left Column: Brand & Trust Card */}
+          {/* Left Column */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md">
-              {/* Brand Frame */}
               <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">
                 <div className="flex items-center justify-center bg-slate-950 p-10">
                   <img
@@ -44,12 +39,11 @@ export const AboutUs: React.FC = () => {
                     WebProLine
                   </h3>
                   <p className="text-xs text-slate-300">
-                    Engenharia de software e plataformas web sob medida
+                    Desenvolvimento web em Braga
                   </p>
                 </div>
               </div>
 
-              {/* Trust Badge below */}
               <div className="mt-4 p-4 rounded-xl border border-slate-800 bg-slate-900/60 flex items-center justify-between text-xs">
                 <div className="flex items-center gap-2 text-slate-300">
                   <Coffee className="h-4 w-4 text-amber-400" />
@@ -60,78 +54,81 @@ export const AboutUs: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Narrative & Values */}
+          {/* Right Column */}
           <div className="lg:col-span-7 space-y-6">
             <div>
               <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400 mb-2">
-                <span>Quem Está Por Trás</span>
-                <span aria-hidden="true" className="text-slate-600">·</span>
-                <span>Engenharia com Rosto Humano</span>
+                <span>Sobre a WebProLine</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white font-display text-balance">
-                Rigor técnico de engenharia aliado à realidade prática do comércio e serviços
+                Tecnologia feita com atenção a quem a vai usar
               </h2>
             </div>
 
             <p className="text-base text-slate-300 leading-relaxed">
-              Somos a <strong>WebProLine</strong>. Ao longo do nosso percurso em engenharia de software, percebemos que a grande maioria dos negócios locais — desde a barbearia na esquina à clínica médica ou à fábrica de produção — ficava presa entre duas más escolhas:
+              A <strong>WebProLine</strong> é um projeto de desenvolvimento web sediado em Braga. Estamos a criar uma plataforma de agendamento para barbearias e queremos que os profissionais do setor participem na definição do que é realmente útil.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
-                <span className="text-rose-400 font-semibold text-xs block mb-1">❌ O Problema Habitual</span>
+                  <span className="text-slate-200 font-semibold text-xs block mb-1">O ponto de partida</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Plataformas genéricas que cobram comissões por cada marcação, ou sites feitos com modelos prontos que ficam lentos e difíceis de manter.
+                  Cada barbearia tem a sua forma de organizar serviços, horários e equipa. Uma ferramenta deve respeitar essa rotina.
                 </p>
               </div>
 
               <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-800/40">
-                <span className="text-cyan-400 font-semibold text-xs block mb-1">✅ A Abordagem WebProLine</span>
+                  <span className="text-cyan-400 font-semibold text-xs block mb-1">Como estamos a trabalhar</span>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Sistemas feitos à medida, leves e rápidos. Sem intermediários, sem comissões e adaptados à rotina real do seu negócio.
+                  Estamos a falar com barbeiros enquanto desenvolvemos a plataforma. O produto está em desenvolvimento e as funcionalidades serão apresentadas com clareza.
                 </p>
               </div>
             </div>
 
             <div className="space-y-3 pt-2">
               <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                Os nossos compromissos em cada projeto:
+                A forma de trabalhar:
               </h4>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <h5 className="text-sm font-semibold text-white">Linguagem clara e direta</h5>
-                  <p className="text-xs text-slate-400 mt-0.5">Explicamos tudo em termos de negócio: quanto tempo poupa e quanto pode passar a faturar.</p>
+                    <h5 className="text-sm font-semibold text-white">Âmbito claro</h5>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    Antes de avançar com um projeto, definimos em conjunto o que será feito e as condições de utilização.
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <h5 className="text-sm font-semibold text-white">Código limpo e autonomia total</h5>
-                  <p className="text-xs text-slate-400 mt-0.5">A plataforma é sua. Não fica refém de contratos de fidelização perpétuos.</p>
+                    <h5 className="text-sm font-semibold text-white">Conversa direta</h5>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    Falamos sobre as necessidades do negócio sem complicar com termos técnicos desnecessários.
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="h-5 w-5 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
-                  <h5 className="text-sm font-semibold text-white">Acompanhamento próximo & formação</h5>
-                  <p className="text-xs text-slate-400 mt-0.5">Ensinamos pessoalmente a sua equipa a tirar partido do sistema em menos de 15 minutos.</p>
+                    <h5 className="text-sm font-semibold text-white">Contacto próximo</h5>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    Estamos em Braga e disponíveis para conversar presencialmente na região ou online.
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Quick actions */}
             <div className="pt-4 flex flex-wrap items-center gap-4">
-              <a
-                href={mailtoHref}
+              <Link
+                to="/contacto"
                 className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3.5 text-xs sm:text-sm transition-all shadow-md shadow-cyan-500/20 cursor-pointer"
               >
                 <Mail className="h-4 w-4" />
-                <span>Falar Connosco por Email</span>
-              </a>
+                <span>Pedir proposta</span>
+              </Link>
 
               <a
                 href={INSTAGRAM_URL}
