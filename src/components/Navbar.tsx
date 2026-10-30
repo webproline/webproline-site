@@ -28,9 +28,9 @@ export const Navbar: React.FC = () => {
           <img
             src="/logo_webproline_256.png"
             alt="WebProLine"
-            width={56}
-            height={56}
-            className="h-14 w-14 rounded-full"
+            width={64}
+            height={64}
+            className="h-16 w-16 rounded-full"
           />
         </Link>
 
