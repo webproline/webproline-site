@@ -18,20 +18,21 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-800/80 bg-slate-950/85 backdrop-blur-md">
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link
           to="/"
           aria-label="WebProLine — página inicial"
-          className="flex items-center transition-opacity hover:opacity-90"
+          className="flex items-center gap-3 transition-opacity hover:opacity-90"
         >
           <img
             src="/logo_webproline_256.png"
             alt="WebProLine"
-            width={64}
-            height={64}
-            className="h-16 w-16 rounded-full"
+            width={72}
+            height={72}
+            className="h-18 w-18 shrink-0 rounded-full"
           />
+          <span className="whitespace-nowrap text-base font-semibold tracking-tight text-white sm:text-lg">WebProLine</span>
         </Link>
 
         {/* Desktop nav */}
