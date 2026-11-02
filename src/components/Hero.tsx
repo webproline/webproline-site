@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div>
-          <div className="max-w-4xl">
+          <div className="mx-auto max-w-4xl">
             <div className="mb-5 flex flex-wrap items-center gap-2 text-xs font-medium tracking-wider uppercase text-cyan-400">
               <span>Desenvolvimento web</span>
               <span aria-hidden="true" className="text-slate-600">·</span>
@@ -29,11 +29,11 @@ export const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl font-display text-balance leading-[1.12]">
-              Websites e soluções digitais pensados para o seu negócio.
+              Websites, lojas online e plataformas para a sua empresa.
             </h1>
 
             <p className="mt-6 max-w-2xl text-lg text-slate-300 sm:text-xl font-normal leading-relaxed">
-              Criamos websites, lojas online e plataformas de gestão para empresas de diferentes áreas. Conhecemos o negócio, percebemos o que precisa e desenvolvemos a solução consigo.
+              Desenvolvemos projetos web para empresas de diferentes áreas. Primeiro, conversamos sobre o que precisa; depois, definimos consigo uma solução adequada ao seu negócio.
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
