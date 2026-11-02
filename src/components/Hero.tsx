@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, Play, ShieldCheck, Zap, Calendar } from 'lucide-react';
+import { ArrowRight, Mail, Play, ShieldCheck } from 'lucide-react';
 import heroWorkspaceImg from '../assets/images/webproline_hero_workspace_1791468818225.jpg';
 import { buildMailto } from '../data/contact';
 
@@ -82,21 +82,7 @@ export const Hero: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="space-y-3.5 bg-slate-900/95 p-5">
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-cyan-500/20 bg-cyan-500/10 text-cyan-400"><Zap className="h-4 w-4" /></div>
-                    <div>
-                      <h2 className="text-sm font-semibold text-white">Soluções para o dia a dia</h2>
-                      <p className="mt-0.5 text-xs text-slate-400">Websites, lojas online e ferramentas de gestão, ajustados ao que cada negócio precisa.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-emerald-500/20 bg-emerald-500/10 text-emerald-400"><Calendar className="h-4 w-4" /></div>
-                    <div>
-                      <h2 className="text-sm font-semibold text-white">Um exemplo: marcações online</h2>
-                      <p className="mt-0.5 text-xs text-slate-400">Explore uma demonstração de uma plataforma pensada para serviços com marcação.</p>
-                    </div>
-                  </div>
+                <div className="bg-slate-900/95 p-5">
                   <a href="#simulador" onClick={handleScrollToSimulator} className="inline-flex items-center gap-1.5 pt-1 text-xs font-semibold text-cyan-400 hover:text-cyan-300">
                     Explorar demonstração <ArrowRight className="h-3.5 w-3.5" />
                   </a>

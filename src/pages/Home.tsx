@@ -45,15 +45,9 @@ export const HomePage: React.FC = () => {
       <section className="py-16 lg:py-24 border-t border-slate-800/80 bg-slate-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold tracking-wider uppercase text-cyan-400 mb-3">
-              O que fazemos
-            </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display text-balance">
-              Desenvolvimento web para diferentes negócios
+            <h2 className="text-2xl sm:text-3xl font-bold text-white font-display text-balance">
+              Os nossos serviços
             </h2>
-            <p className="mt-3 text-slate-400 text-sm sm:text-base">
-              Desde websites e lojas online a plataformas de agendamento e gestão, desenvolvemos soluções adequadas ao contexto de cada empresa.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
