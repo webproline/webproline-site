@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mail, Play, ShieldCheck } from 'lucide-react';
-import heroWorkspaceImg from '../assets/images/webproline_hero_workspace_1791468818225.jpg';
+import { Mail, Play, ShieldCheck } from 'lucide-react';
 import { buildMailto } from '../data/contact';
 
 export const Hero: React.FC = () => {
@@ -21,8 +20,8 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-7">
+        <div>
+          <div className="max-w-4xl">
             <div className="mb-5 flex flex-wrap items-center gap-2 text-xs font-medium tracking-wider uppercase text-cyan-400">
               <span>Desenvolvimento web</span>
               <span aria-hidden="true" className="text-slate-600">·</span>
@@ -62,31 +61,6 @@ export const Hero: React.FC = () => {
                 <span>Projetos para diferentes áreas</span>
                 <span aria-hidden="true" className="text-slate-600">·</span>
                 <span>Contacto direto</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/90 shadow-2xl">
-                <div className="aspect-[16/10] w-full overflow-hidden relative">
-                  <img
-                    src={heroWorkspaceImg}
-                    alt="Espaço de trabalho da WebProLine em Braga"
-                    className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-lg border border-slate-800 bg-slate-950/80 p-3 text-xs text-slate-200 backdrop-blur-md">
-                    <span className="font-medium text-white">WebProLine</span>
-                    <span className="text-[11px] text-slate-400">Braga, Portugal</span>
-                  </div>
-                </div>
-
-                <div className="bg-slate-900/95 p-5">
-                  <a href="#simulador" onClick={handleScrollToSimulator} className="inline-flex items-center gap-1.5 pt-1 text-xs font-semibold text-cyan-400 hover:text-cyan-300">
-                    Explorar demonstração <ArrowRight className="h-3.5 w-3.5" />
-                  </a>
-                </div>
               </div>
             </div>
           </div>
