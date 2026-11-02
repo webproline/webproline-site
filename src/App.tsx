@@ -4,12 +4,11 @@
  */
 
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/Home';
 import { SimuladorPage } from './pages/Simulador';
-import { DiagnosticoPage } from './pages/Diagnostico';
 import { SolucoesPage } from './pages/Solucoes';
 import { SobrePage } from './pages/Sobre';
 import { ResultadosPage } from './pages/Resultados';
@@ -24,11 +23,11 @@ export default function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/simulador" element={<SimuladorPage />} />
-            <Route path="/diagnostico" element={<DiagnosticoPage />} />
             <Route path="/solucoes" element={<SolucoesPage />} />
             <Route path="/sobre" element={<SobrePage />} />
             <Route path="/resultados" element={<ResultadosPage />} />
             <Route path="/contacto" element={<ContactoPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
         <Footer />

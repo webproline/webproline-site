@@ -46,15 +46,3 @@ export interface BookingState {
   confirmed: boolean;
 }
 
-export interface SectorDiagnostic {
-  id: BusinessSector;
-  title: string;
-  subtitle: string;
-  iconName: string;
-  recommendedSolution: string;
-  idealFor: string;
-  timeSavedWeeklyHours: number;
-  revenueBoostPercent: number;
-  keyBenefits: string[];
-  techStack: string[];
-}

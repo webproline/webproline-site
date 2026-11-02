@@ -1,4 +1,4 @@
-import { BusinessSector, SimulatorPreset, SectorDiagnostic } from '../types';
+import { BusinessSector, SimulatorPreset } from '../types';
 
 export const SIMULATOR_PRESETS: SimulatorPreset[] = [
   {
@@ -178,90 +178,6 @@ export const SIMULATOR_PRESETS: SimulatorPreset[] = [
       },
     ],
     availableSlots: ['12:30', '13:30', '19:45', '20:30', '21:15', '22:00'],
-  },
-];
-
-export const SECTOR_DIAGNOSTICS: SectorDiagnostic[] = [
-  {
-    id: 'barbershop',
-    title: 'Barbearias, Salões de Beleza & Estética',
-    subtitle: 'Exemplo de uma plataforma web para gerir serviços, horários e marcações.',
-    iconName: 'Scissors',
-    recommendedSolution: 'Plataforma de agendamento para barbearias',
-    idealFor: 'Negócios de serviços que trabalham com marcação, como barbearias e salões.',
-    timeSavedWeeklyHours: 6.5,
-    revenueBoostPercent: 24,
-    keyBenefits: [
-      'Como os clientes encontram e marcam um horário',
-      'Como serviços, durações e horários devem ser apresentados',
-      'Que avisos ou integrações seriam úteis na rotina',
-      'Como adaptar o percurso de marcação a cada equipa',
-    ],
-    techStack: ['Web App PWA ultrarrápida', 'WhatsApp Business Cloud API', 'Google Calendar Sync', 'Painel de Gestão'],
-  },
-  {
-    id: 'clinic',
-    title: 'Clínicas, Consultórios Médicos & Terapeutas',
-    subtitle: 'Área de negócio a explorar em projetos futuros.',
-    iconName: 'Stethoscope',
-    recommendedSolution: 'Ferramentas web para clínicas',
-    idealFor: 'Clínicas de fisioterapia, psicologia, dentistas e estética médica com múltiplos especialistas.',
-    timeSavedWeeklyHours: 9.0,
-    revenueBoostPercent: 18,
-    keyBenefits: [
-      'Mapear o processo atual de marcação',
-      'Identificar integrações e requisitos de privacidade',
-      'Definir o âmbito antes de propor desenvolvimento',
-    ],
-    techStack: ['React + Base de dados segura', 'Gestão de múltiplos terapeutas', 'Notificações SMS/WhatsApp'],
-  },
-  {
-    id: 'retail',
-    title: 'Comércio Local, Lojas & Venda de Produtos',
-    subtitle: 'Projetos definidos conforme o catálogo, os pagamentos e a operação da loja.',
-    iconName: 'ShoppingBag',
-    recommendedSolution: 'Website ou loja online',
-    idealFor: 'Lojas de vestuário, garrafeiras, artesanato, peças ou produtos com catálogo em crescimento.',
-    timeSavedWeeklyHours: 5.0,
-    revenueBoostPercent: 32,
-    keyBenefits: [
-      'Organizar produtos e categorias',
-      'Escolher os métodos de pagamento adequados',
-      'Preparar uma experiência simples em telemóvel',
-    ],
-    techStack: ['Next.js / WooCommerce Custom', 'Gateway Ifthenpay / Easypay / Stripe', 'SEO Local Minho'],
-  },
-  {
-    id: 'restaurant',
-    title: 'Restaurantes, Cafés & Hospitalidade',
-    subtitle: 'Possibilidade a avaliar conforme a operação do espaço.',
-    iconName: 'Utensils',
-    recommendedSolution: 'Ferramenta digital para restauração',
-    idealFor: 'Cafés, pastelarias e restaurantes que querem organizar melhor a sua presença online.',
-    timeSavedWeeklyHours: 7.0,
-    revenueBoostPercent: 20,
-    keyBenefits: [
-      'Perceber como são geridas as reservas atualmente',
-      'Identificar informação que precisa de estar acessível à equipa',
-      'Definir requisitos e integrações necessárias',
-    ],
-    techStack: ['Painel do Gestor de Sala', 'Notificações Instantâneas', 'QR Code de Ementa Instantânea'],
-  },
-  {
-    id: 'industry_sme',
-    title: 'Indústria, Oficinas, Logística & PMEs',
-    subtitle: 'Ferramentas internas definidas após conhecer os processos da equipa.',
-    iconName: 'Factory',
-    recommendedSolution: 'Ferramenta web para processos internos',
-    idealFor: 'Empresas com processos operacionais manuais, encomendas em papel e necessidade de rastreio.',
-    timeSavedWeeklyHours: 14.0,
-    revenueBoostPercent: 28,
-    keyBenefits: [
-      'Mapear tarefas repetitivas e informação dispersa',
-      'Definir o que precisa de ser centralizado',
-      'Avaliar acessos, relatórios e integrações necessários',
-    ],
-    techStack: ['Fullstack TypeScript', 'Bases de Dados Relacionais', 'Autenticação por Cargos (RBAC)'],
   },
 ];
 

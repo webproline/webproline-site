@@ -11,7 +11,6 @@ export const Navbar: React.FC = () => {
       { label: 'Resultados', to: '/resultados' },
       { label: 'Sobre Nós', to: '/sobre' },
       { label: 'Simulador', to: '/simulador' },
-      { label: 'Diagnóstico', to: '/diagnostico' },
     ];
 
   const isActive = (path: string) => location.pathname === path;
