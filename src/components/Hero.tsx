@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Play, ShieldCheck } from 'lucide-react';
+import { Mail, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { buildMailto } from '../data/contact';
 
 export const Hero: React.FC = () => {
@@ -7,10 +8,6 @@ export const Hero: React.FC = () => {
     'Pedido de informação sobre os nossos serviços',
     'Olá, estive a ver o site da WebProLine e gostava de conversar sobre um projeto para o meu negócio.'
   );
-
-  const handleScrollToSimulator = () => {
-    document.getElementById('simulador')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-32 bg-slate-950">
@@ -37,13 +34,14 @@ export const Hero: React.FC = () => {
             </p>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <button
-                onClick={handleScrollToSimulator}
+              <Link
+                to="/simulador"
+                onClick={() => window.scrollTo(0, 0)}
                 className="group inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 py-4 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition-all hover:brightness-110 active:scale-[0.98] cursor-pointer whitespace-nowrap"
               >
                 <Play className="h-4 w-4 fill-slate-950 transition-transform group-hover:scale-110" />
                 <span>Ver demonstração</span>
-              </button>
+              </Link>
 
               <a
                 href={mailtoHref}
@@ -54,15 +52,6 @@ export const Hero: React.FC = () => {
               </a>
             </div>
 
-            <div className="mt-10 border-t border-slate-800/80 pt-6">
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium text-slate-400">
-                <span className="flex items-center gap-1.5 text-slate-300"><ShieldCheck className="h-4 w-4 text-cyan-400" />Acompanhamento próximo</span>
-                <span aria-hidden="true" className="text-slate-600">·</span>
-                <span>Projetos para diferentes áreas</span>
-                <span aria-hidden="true" className="text-slate-600">·</span>
-                <span>Contacto direto</span>
-              </div>
-            </div>
           </div>
 
         </div>
