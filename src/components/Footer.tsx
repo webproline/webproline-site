@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
             </li>
             <li>
               <Link to="/resultados" className="hover:text-cyan-400 transition-colors">
-                Trabalhos Realizados
+                Portfólio
               </Link>
             </li>
             <li>
